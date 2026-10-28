@@ -116,8 +116,7 @@ export function AboutPage() {
 
         {/* --- people ------------------------------------------------------ */}
         <Reveal className="py-8 md:py-20" delayMs={180}>
-          <div className="text-center mb-20 md:mb-28">
-            <p className="type-label text-bronze-ink uppercase tracking-[0.25em] mb-4">The people</p>
+          <div className="mb-12 text-center md:mb-16">
             <h2 className="type-title text-ink mb-6 bg-clip-text text-transparent bg-gradient-to-r from-ink via-bronze to-ink">
               The team
             </h2>
@@ -127,7 +126,7 @@ export function AboutPage() {
           <section className="relative mb-14 md:mb-20">
             <div className="absolute inset-0 -z-10 bg-bronze-soft/40 rounded-2xl blur-3xl" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
-              <div className="flex flex-col items-center gap-5">
+              <div className="founder-profile-card">
                 <TeamCard
                   name="Yogeshwor Sharma"
                   role="Founder, President, & Head of Operations"
@@ -141,7 +140,7 @@ export function AboutPage() {
                   Message from president
                 </Button>
               </div>
-              <div className="flex flex-col items-center gap-5">
+              <div className="founder-profile-card">
                 <TeamCard
                   name="Eron Subedi"
                   role="Founder, Chief Architect & Chief of Investigations"
