@@ -1,0 +1,1333 @@
+{
+  "meta": {
+    "publicationDate": "2026-06-15",
+    "edition": "2026",
+    "title": "Ranking of Nepali +2 Schools",
+    "subtitle": "The worst and the best of top high schools.",
+    "source": "Anonymous student survey",
+    "totalSchools": 43,
+    "totalResponses": 200,
+    "attributedResponses": 196,
+    "unattributedResponses": 4,
+    "surveyedButUnpublished": 0,
+    "location": "Kathmandu Valley",
+    "gradeRange": "+2",
+    "weights": {
+      "schoolEnvironment": 0.3,
+      "infrastructure": 0.2,
+      "netCost": 0.2,
+      "netBenefit": 0.3,
+      "complaint": 0
+    },
+    "categories": [
+      {
+        "key": "environment",
+        "label": "School Environment",
+        "blurb": "Atmosphere, culture, student life, and the quality of the surrounding learning environment."
+      },
+      {
+        "key": "infrastructure",
+        "label": "Infrastructure",
+        "blurb": "Classrooms, laboratories, libraries, sports grounds, technology, and campus amenities."
+      },
+      {
+        "key": "cost",
+        "label": "Net Cost",
+        "blurb": "Overall cost rating. Lower is better — inverted into a 0-100 desirability score."
+      },
+      {
+        "key": "benefit",
+        "label": "Net Benefit",
+        "blurb": "What students gain after leaving: career outcomes, placement, alumni network, long-term success."
+      },
+      {
+        "key": "complaint",
+        "label": "Complaint",
+        "blurb": "Registered complaints and their resolution status."
+      }
+    ]
+  },
+  "schools": [
+    {
+      "id": 16,
+      "name": "Ullens School",
+      "shortName": "Ullens",
+      "initials": "US",
+      "logoColor": "#7c2d12",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 81.4,
+        "infrastructure": 83.4,
+        "cost": 9.0,
+        "netBenefit": 85.4
+      },
+      "responses": 6,
+      "overallScore": 84.9,
+      "categories": {
+        "environment": 81.4,
+        "infrastructure": 83.4,
+        "cost": 91.0,
+        "benefit": 85.4,
+        "complaint": null
+      },
+      "rank": 1,
+      "band": "strong"
+    },
+    {
+      "id": 15,
+      "name": "Rato Bangala School",
+      "shortName": "RBS",
+      "initials": "RB",
+      "logoColor": "#e11d48",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 82.1,
+        "infrastructure": 80.1,
+        "cost": 23.8,
+        "netBenefit": 87.1
+      },
+      "responses": 7,
+      "overallScore": 82.0,
+      "categories": {
+        "environment": 82.1,
+        "infrastructure": 80.1,
+        "cost": 76.2,
+        "benefit": 87.1,
+        "complaint": null
+      },
+      "rank": 2,
+      "band": "strong"
+    },
+    {
+      "id": 7,
+      "name": "Premier International IB Continuum School",
+      "shortName": "PIB",
+      "initials": "PI",
+      "logoColor": "#0d9488",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 78.1,
+        "infrastructure": 80.1,
+        "cost": 13.3,
+        "netBenefit": 77.1
+      },
+      "responses": 0,
+      "overallScore": 79.9,
+      "categories": {
+        "environment": 78.1,
+        "infrastructure": 80.1,
+        "cost": 86.7,
+        "benefit": 77.1,
+        "complaint": null
+      },
+      "rank": 3,
+      "band": "strong"
+    },
+    {
+      "id": 1,
+      "name": "Budhanilkantha School",
+      "shortName": "BNKS",
+      "initials": "BN",
+      "logoColor": "#1a365d",
+      "type": "Public",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 79.1,
+        "infrastructure": 81.1,
+        "cost": 29.2,
+        "netBenefit": 84.1
+      },
+      "responses": 0,
+      "overallScore": 79.4,
+      "categories": {
+        "environment": 79.1,
+        "infrastructure": 81.1,
+        "cost": 70.8,
+        "benefit": 84.1,
+        "complaint": null
+      },
+      "rank": 4,
+      "band": "strong"
+    },
+    {
+      "id": 5,
+      "name": "St. Xavier's College Maitighar",
+      "shortName": "SXC M",
+      "initials": "SX",
+      "logoColor": "#b91c1c",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 80.2,
+        "infrastructure": 83.2,
+        "cost": 53.4,
+        "netBenefit": 87.2
+      },
+      "responses": 0,
+      "overallScore": 76.2,
+      "categories": {
+        "environment": 80.2,
+        "infrastructure": 83.2,
+        "cost": 46.6,
+        "benefit": 87.2,
+        "complaint": null
+      },
+      "rank": 5,
+      "band": "strong"
+    },
+    {
+      "id": 34,
+      "name": "Divya Bal Batika Secondary School",
+      "shortName": "Divya SS",
+      "initials": "DB",
+      "logoColor": "#ea580c",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 62.9,
+        "infrastructure": 94.0,
+        "cost": 56.2,
+        "netBenefit": 84.0
+      },
+      "responses": 6,
+      "overallScore": 71.6,
+      "categories": {
+        "environment": 62.9,
+        "infrastructure": 94.0,
+        "cost": 43.8,
+        "benefit": 84.0,
+        "complaint": null
+      },
+      "rank": 6,
+      "band": "fair"
+    },
+    {
+      "id": 24,
+      "name": "Kathmandu World School",
+      "shortName": "KWS",
+      "initials": "KW",
+      "logoColor": "#15803d",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 53.2,
+        "infrastructure": 88.2,
+        "cost": 32.8,
+        "netBenefit": 78.2
+      },
+      "responses": 7,
+      "overallScore": 70.5,
+      "categories": {
+        "environment": 53.2,
+        "infrastructure": 88.2,
+        "cost": 67.2,
+        "benefit": 78.2,
+        "complaint": null
+      },
+      "rank": 7,
+      "band": "fair"
+    },
+    {
+      "id": 19,
+      "name": "Swostishree Gurukul",
+      "shortName": "SG",
+      "initials": "SG",
+      "logoColor": "#059669",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 63.8,
+        "infrastructure": 66.8,
+        "cost": 10.6,
+        "netBenefit": 63.8
+      },
+      "responses": 6,
+      "overallScore": 69.5,
+      "categories": {
+        "environment": 63.8,
+        "infrastructure": 66.8,
+        "cost": 89.4,
+        "benefit": 63.8,
+        "complaint": null
+      },
+      "rank": 8,
+      "band": "fair"
+    },
+    {
+      "id": 31,
+      "name": "Pathshala Nepal Foundation",
+      "shortName": "Pathshala",
+      "initials": "PN",
+      "logoColor": "#059669",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 65.1,
+        "infrastructure": 88.4,
+        "cost": 51.6,
+        "netBenefit": 72.9
+      },
+      "responses": 6,
+      "overallScore": 68.8,
+      "categories": {
+        "environment": 65.1,
+        "infrastructure": 88.4,
+        "cost": 48.4,
+        "benefit": 72.9,
+        "complaint": null
+      },
+      "rank": 9,
+      "band": "fair"
+    },
+    {
+      "id": 12,
+      "name": "Prasadi Academy",
+      "shortName": "Prasadi",
+      "initials": "PA",
+      "logoColor": "#4f46e5",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 51.9,
+        "infrastructure": 77.8,
+        "cost": 46.3,
+        "netBenefit": 85.3
+      },
+      "responses": 7,
+      "overallScore": 67.5,
+      "categories": {
+        "environment": 51.9,
+        "infrastructure": 77.8,
+        "cost": 53.7,
+        "benefit": 85.3,
+        "complaint": null
+      },
+      "rank": 10,
+      "band": "fair"
+    },
+    {
+      "id": 38,
+      "name": "Rupy's International School",
+      "shortName": "Rupy's",
+      "initials": "RI",
+      "logoColor": "#db2777",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 52.3,
+        "infrastructure": 74.0,
+        "cost": 40.9,
+        "netBenefit": 84.0
+      },
+      "responses": 4,
+      "overallScore": 67.5,
+      "categories": {
+        "environment": 52.3,
+        "infrastructure": 74.0,
+        "cost": 59.1,
+        "benefit": 84.0,
+        "complaint": null
+      },
+      "rank": 11,
+      "band": "fair"
+    },
+    {
+      "id": 26,
+      "name": "Millsberry International College",
+      "shortName": "Millsberry",
+      "initials": "MI",
+      "logoColor": "#4338ca",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 60.7,
+        "infrastructure": 88.2,
+        "cost": 37.9,
+        "netBenefit": 63.2
+      },
+      "responses": 7,
+      "overallScore": 67.2,
+      "categories": {
+        "environment": 60.7,
+        "infrastructure": 88.2,
+        "cost": 62.1,
+        "benefit": 63.2,
+        "complaint": null
+      },
+      "rank": 12,
+      "band": "fair"
+    },
+    {
+      "id": 22,
+      "name": "Trinity International School",
+      "shortName": "Trinity",
+      "initials": "TI",
+      "logoColor": "#0e7490",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 41.9,
+        "infrastructure": 84.1,
+        "cost": 36.5,
+        "netBenefit": 80.8
+      },
+      "responses": 6,
+      "overallScore": 66.3,
+      "categories": {
+        "environment": 41.9,
+        "infrastructure": 84.1,
+        "cost": 63.5,
+        "benefit": 80.8,
+        "complaint": null
+      },
+      "rank": 13,
+      "band": "fair"
+    },
+    {
+      "id": 10,
+      "name": "Chelsea World School",
+      "shortName": "CWS",
+      "initials": "CW",
+      "logoColor": "#059669",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 51.6,
+        "infrastructure": 76.6,
+        "cost": 26.4,
+        "netBenefit": 66.6
+      },
+      "responses": 0,
+      "overallScore": 65.5,
+      "categories": {
+        "environment": 51.6,
+        "infrastructure": 76.6,
+        "cost": 73.6,
+        "benefit": 66.6,
+        "complaint": null
+      },
+      "rank": 14,
+      "band": "fair"
+    },
+    {
+      "id": 33,
+      "name": "Nisarga Batika School",
+      "shortName": "Nisarga",
+      "initials": "NB",
+      "logoColor": "#16a34a",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 57.6,
+        "infrastructure": 81.0,
+        "cost": 53.8,
+        "netBenefit": 73.4
+      },
+      "responses": 7,
+      "overallScore": 64.7,
+      "categories": {
+        "environment": 57.6,
+        "infrastructure": 81.0,
+        "cost": 46.2,
+        "benefit": 73.4,
+        "complaint": null
+      },
+      "rank": 15,
+      "band": "fair"
+    },
+    {
+      "id": 35,
+      "name": "Ace Institute of Management",
+      "shortName": "Ace IM",
+      "initials": "AI",
+      "logoColor": "#6d28d9",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 52.6,
+        "infrastructure": 80.4,
+        "cost": 31.4,
+        "netBenefit": 63.6
+      },
+      "responses": 6,
+      "overallScore": 64.6,
+      "categories": {
+        "environment": 52.6,
+        "infrastructure": 80.4,
+        "cost": 68.6,
+        "benefit": 63.6,
+        "complaint": null
+      },
+      "rank": 16,
+      "band": "fair"
+    },
+    {
+      "id": 30,
+      "name": "DAV School",
+      "shortName": "DAV",
+      "initials": "DA",
+      "logoColor": "#dc2626",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 51.3,
+        "infrastructure": 88.0,
+        "cost": 51.9,
+        "netBenefit": 70.5
+      },
+      "responses": 7,
+      "overallScore": 63.7,
+      "categories": {
+        "environment": 51.3,
+        "infrastructure": 88.0,
+        "cost": 48.1,
+        "benefit": 70.5,
+        "complaint": null
+      },
+      "rank": 17,
+      "band": "fair"
+    },
+    {
+      "id": 9,
+      "name": "Graded English Medium School",
+      "shortName": "GEMS",
+      "initials": "GE",
+      "logoColor": "#2563eb",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 45.3,
+        "infrastructure": 78.7,
+        "cost": 24.9,
+        "netBenefit": 63.7
+      },
+      "responses": 0,
+      "overallScore": 63.5,
+      "categories": {
+        "environment": 45.3,
+        "infrastructure": 78.7,
+        "cost": 75.1,
+        "benefit": 63.7,
+        "complaint": null
+      },
+      "rank": 18,
+      "band": "fair"
+    },
+    {
+      "id": 18,
+      "name": "Euro School",
+      "shortName": "Euro",
+      "initials": "ES",
+      "logoColor": "#0284c7",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 50.8,
+        "infrastructure": 86.2,
+        "cost": 35.2,
+        "netBenefit": 56.2
+      },
+      "responses": 6,
+      "overallScore": 62.3,
+      "categories": {
+        "environment": 50.8,
+        "infrastructure": 86.2,
+        "cost": 64.8,
+        "benefit": 56.2,
+        "complaint": null
+      },
+      "rank": 19,
+      "band": "fair"
+    },
+    {
+      "id": 43,
+      "name": "Liberty Academy",
+      "shortName": "Liberty",
+      "initials": "LA",
+      "logoColor": "#2563eb",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 50,
+        "infrastructure": 70,
+        "cost": 40,
+        "netBenefit": 60
+      },
+      "responses": 5,
+      "overallScore": 61.0,
+      "categories": {
+        "environment": 50,
+        "infrastructure": 70,
+        "cost": 60,
+        "benefit": 60,
+        "complaint": null
+      },
+      "rank": 20,
+      "band": "fair"
+    },
+    {
+      "id": 6,
+      "name": "Kendriya Vidyalaya",
+      "shortName": "KV",
+      "initials": "KV",
+      "logoColor": "#b45309",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 60.2,
+        "infrastructure": 49.8,
+        "cost": 59.4,
+        "netBenefit": 82.8
+      },
+      "responses": 0,
+      "overallScore": 61.0,
+      "categories": {
+        "environment": 60.2,
+        "infrastructure": 49.8,
+        "cost": 40.6,
+        "benefit": 82.8,
+        "complaint": null
+      },
+      "rank": 21,
+      "band": "fair"
+    },
+    {
+      "id": 40,
+      "name": "St. Mary's School",
+      "shortName": "St. Mary's",
+      "initials": "SM",
+      "logoColor": "#0369a1",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 36.6,
+        "infrastructure": 75,
+        "cost": 40,
+        "netBenefit": 75
+      },
+      "responses": 4,
+      "overallScore": 60.5,
+      "categories": {
+        "environment": 36.6,
+        "infrastructure": 75,
+        "cost": 60,
+        "benefit": 75,
+        "complaint": null
+      },
+      "rank": 22,
+      "band": "fair"
+    },
+    {
+      "id": 4,
+      "name": "Kathmandu Model College",
+      "shortName": "KMC",
+      "initials": "KM",
+      "logoColor": "#0f172a",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 40.6,
+        "infrastructure": 82.4,
+        "cost": 44.7,
+        "netBenefit": 67.4
+      },
+      "responses": 2,
+      "overallScore": 60.0,
+      "categories": {
+        "environment": 40.6,
+        "infrastructure": 82.4,
+        "cost": 55.3,
+        "benefit": 67.4,
+        "complaint": null
+      },
+      "rank": 23,
+      "band": "fair"
+    },
+    {
+      "id": 39,
+      "name": "Brihaspati Vidyasadan",
+      "shortName": "BVS",
+      "initials": "BV",
+      "logoColor": "#7c3aed",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 63.6,
+        "infrastructure": 58.6,
+        "cost": 49.6,
+        "netBenefit": 63.6
+      },
+      "responses": 4,
+      "overallScore": 60.0,
+      "categories": {
+        "environment": 63.6,
+        "infrastructure": 58.6,
+        "cost": 50.4,
+        "benefit": 63.6,
+        "complaint": null
+      },
+      "rank": 24,
+      "band": "fair"
+    },
+    {
+      "id": 25,
+      "name": "Liverpool International College",
+      "shortName": "Liverpool",
+      "initials": "LI",
+      "logoColor": "#c2410c",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 43.1,
+        "infrastructure": 66.4,
+        "cost": 39.3,
+        "netBenefit": 66.4
+      },
+      "responses": 5,
+      "overallScore": 58.3,
+      "categories": {
+        "environment": 43.1,
+        "infrastructure": 66.4,
+        "cost": 60.7,
+        "benefit": 66.4,
+        "complaint": null
+      },
+      "rank": 25,
+      "band": "fair"
+    },
+    {
+      "id": 37,
+      "name": "Little Angels School",
+      "shortName": "LA",
+      "initials": "LA",
+      "logoColor": "#eab308",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 45.1,
+        "infrastructure": 75.1,
+        "cost": 34.1,
+        "netBenefit": 55.1
+      },
+      "responses": 5,
+      "overallScore": 58.3,
+      "categories": {
+        "environment": 45.1,
+        "infrastructure": 75.1,
+        "cost": 65.9,
+        "benefit": 55.1,
+        "complaint": null
+      },
+      "rank": 26,
+      "band": "fair"
+    },
+    {
+      "id": 28,
+      "name": "Ace Higher Secondary School",
+      "shortName": "Ace HS",
+      "initials": "AH",
+      "logoColor": "#7e22ce",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 46.6,
+        "infrastructure": 64.4,
+        "cost": 50.8,
+        "netBenefit": 64.4
+      },
+      "responses": 5,
+      "overallScore": 56.0,
+      "categories": {
+        "environment": 46.6,
+        "infrastructure": 64.4,
+        "cost": 49.2,
+        "benefit": 64.4,
+        "complaint": null
+      },
+      "rank": 27,
+      "band": "fair"
+    },
+    {
+      "id": 23,
+      "name": "Xavier International School",
+      "shortName": "Xavier Intl",
+      "initials": "XI",
+      "logoColor": "#be123c",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 36.8,
+        "infrastructure": 60.2,
+        "cost": 27.6,
+        "netBenefit": 60.2
+      },
+      "responses": 5,
+      "overallScore": 55.7,
+      "categories": {
+        "environment": 36.8,
+        "infrastructure": 60.2,
+        "cost": 72.4,
+        "benefit": 60.2,
+        "complaint": null
+      },
+      "rank": 28,
+      "band": "fair"
+    },
+    {
+      "id": 41,
+      "name": "Texas International College",
+      "shortName": "Texas",
+      "initials": "TI",
+      "logoColor": "#be123c",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 58.8,
+        "infrastructure": 52.2,
+        "cost": 48.9,
+        "netBenefit": 57.2
+      },
+      "responses": 4,
+      "overallScore": 55.5,
+      "categories": {
+        "environment": 58.8,
+        "infrastructure": 52.2,
+        "cost": 51.1,
+        "benefit": 57.2,
+        "complaint": null
+      },
+      "rank": 29,
+      "band": "fair"
+    },
+    {
+      "id": 32,
+      "name": "British Model College",
+      "shortName": "BMC",
+      "initials": "BM",
+      "logoColor": "#1e40af",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 43.5,
+        "infrastructure": 54.2,
+        "cost": 30.7,
+        "netBenefit": 58.2
+      },
+      "responses": 9,
+      "overallScore": 55.2,
+      "categories": {
+        "environment": 43.5,
+        "infrastructure": 54.2,
+        "cost": 69.3,
+        "benefit": 58.2,
+        "complaint": null
+      },
+      "rank": 30,
+      "band": "fair"
+    },
+    {
+      "id": 11,
+      "name": "Takshashila Academy",
+      "shortName": "Takshashila",
+      "initials": "TA",
+      "logoColor": "#dc2626",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 50.2,
+        "infrastructure": 56.9,
+        "cost": 52.5,
+        "netBenefit": 61.9
+      },
+      "responses": 7,
+      "overallScore": 54.5,
+      "categories": {
+        "environment": 50.2,
+        "infrastructure": 56.9,
+        "cost": 47.5,
+        "benefit": 61.9,
+        "complaint": null
+      },
+      "rank": 31,
+      "band": "fair"
+    },
+    {
+      "id": 29,
+      "name": "Modern Indian School",
+      "shortName": "MIS",
+      "initials": "MI",
+      "logoColor": "#1d4ed8",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 41.4,
+        "infrastructure": 66.4,
+        "cost": 50.4,
+        "netBenefit": 58.8
+      },
+      "responses": 7,
+      "overallScore": 53.2,
+      "categories": {
+        "environment": 41.4,
+        "infrastructure": 66.4,
+        "cost": 49.6,
+        "benefit": 58.8,
+        "complaint": null
+      },
+      "rank": 32,
+      "band": "fair"
+    },
+    {
+      "id": 21,
+      "name": "Kathmandu Model College, Lalitpur",
+      "shortName": "KMC L",
+      "initials": "KL",
+      "logoColor": "#334155",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 43.6,
+        "infrastructure": 71.4,
+        "cost": 45.8,
+        "netBenefit": 48.1
+      },
+      "responses": 4,
+      "overallScore": 52.6,
+      "categories": {
+        "environment": 43.6,
+        "infrastructure": 71.4,
+        "cost": 54.2,
+        "benefit": 48.1,
+        "complaint": null
+      },
+      "rank": 33,
+      "band": "fair"
+    },
+    {
+      "id": 17,
+      "name": "Kathmandu Bernhardt School",
+      "shortName": "KBS",
+      "initials": "KB",
+      "logoColor": "#1d4ed8",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 46.0,
+        "infrastructure": 48.2,
+        "cost": 52.9,
+        "netBenefit": 64.9
+      },
+      "responses": 5,
+      "overallScore": 52.3,
+      "categories": {
+        "environment": 46.0,
+        "infrastructure": 48.2,
+        "cost": 47.1,
+        "benefit": 64.9,
+        "complaint": null
+      },
+      "rank": 34,
+      "band": "fair"
+    },
+    {
+      "id": 27,
+      "name": "SOS Hermann Gmeiner Higher Secondary School",
+      "shortName": "SOSHGSS",
+      "initials": "SO",
+      "logoColor": "#b45309",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 48.8,
+        "infrastructure": 57.4,
+        "cost": 59.8,
+        "netBenefit": 55.4
+      },
+      "responses": 9,
+      "overallScore": 50.8,
+      "categories": {
+        "environment": 48.8,
+        "infrastructure": 57.4,
+        "cost": 40.2,
+        "benefit": 55.4,
+        "complaint": null
+      },
+      "rank": 35,
+      "band": "fair"
+    },
+    {
+      "id": 36,
+      "name": "Southwestern State College",
+      "shortName": "Southwestern",
+      "initials": "SW",
+      "logoColor": "#2563eb",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 45.4,
+        "infrastructure": 62.1,
+        "cost": 48.5,
+        "netBenefit": 45.4
+      },
+      "responses": 5,
+      "overallScore": 50.0,
+      "categories": {
+        "environment": 45.4,
+        "infrastructure": 62.1,
+        "cost": 51.5,
+        "benefit": 45.4,
+        "complaint": null
+      },
+      "rank": 36,
+      "band": "fair"
+    },
+    {
+      "id": 2,
+      "name": "St. Xavier's College, Jawlakhel",
+      "shortName": "SXC J",
+      "initials": "SJ",
+      "logoColor": "#b91c1c",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 34.4,
+        "infrastructure": 56.8,
+        "cost": 42.4,
+        "netBenefit": 51.8
+      },
+      "responses": 0,
+      "overallScore": 48.8,
+      "categories": {
+        "environment": 34.4,
+        "infrastructure": 56.8,
+        "cost": 57.6,
+        "benefit": 51.8,
+        "complaint": null
+      },
+      "rank": 37,
+      "band": "weak"
+    },
+    {
+      "id": 8,
+      "name": "Global School of Science",
+      "shortName": "GSS",
+      "initials": "GS",
+      "logoColor": "#7c3aed",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 36.0,
+        "infrastructure": 70.4,
+        "cost": 41.7,
+        "netBenefit": 40.4
+      },
+      "responses": 0,
+      "overallScore": 48.7,
+      "categories": {
+        "environment": 36.0,
+        "infrastructure": 70.4,
+        "cost": 58.3,
+        "benefit": 40.4,
+        "complaint": null
+      },
+      "rank": 38,
+      "band": "weak"
+    },
+    {
+      "id": 42,
+      "name": "United Academy",
+      "shortName": "United",
+      "initials": "UA",
+      "logoColor": "#166534",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 44.5,
+        "infrastructure": 66.2,
+        "cost": 49.9,
+        "netBenefit": 36.2
+      },
+      "responses": 4,
+      "overallScore": 47.5,
+      "categories": {
+        "environment": 44.5,
+        "infrastructure": 66.2,
+        "cost": 50.1,
+        "benefit": 36.2,
+        "complaint": null
+      },
+      "rank": 39,
+      "band": "weak"
+    },
+    {
+      "id": 14,
+      "name": "VS Niketan Secondary School",
+      "shortName": "VS Niketan",
+      "initials": "VN",
+      "logoColor": "#65a30d",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 41.5,
+        "infrastructure": 58.2,
+        "cost": 47.8,
+        "netBenefit": 35.7
+      },
+      "responses": 7,
+      "overallScore": 45.2,
+      "categories": {
+        "environment": 41.5,
+        "infrastructure": 58.2,
+        "cost": 52.2,
+        "benefit": 35.7,
+        "complaint": null
+      },
+      "rank": 40,
+      "band": "weak"
+    },
+    {
+      "id": 3,
+      "name": "Uniglobe College",
+      "shortName": "UC",
+      "initials": "UC",
+      "logoColor": "#7c3aed",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 36.9,
+        "infrastructure": 46.9,
+        "cost": 43.6,
+        "netBenefit": 38.9
+      },
+      "responses": 0,
+      "overallScore": 43.4,
+      "categories": {
+        "environment": 36.9,
+        "infrastructure": 46.9,
+        "cost": 56.4,
+        "benefit": 38.9,
+        "complaint": null
+      },
+      "rank": 41,
+      "band": "weak"
+    },
+    {
+      "id": 20,
+      "name": "Campion School",
+      "shortName": "Campion",
+      "initials": "CS",
+      "logoColor": "#9333ea",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 43.8,
+        "infrastructure": 39.2,
+        "cost": 40.6,
+        "netBenefit": 29.2
+      },
+      "responses": 5,
+      "overallScore": 41.6,
+      "categories": {
+        "environment": 43.8,
+        "infrastructure": 39.2,
+        "cost": 59.4,
+        "benefit": 29.2,
+        "complaint": null
+      },
+      "rank": 42,
+      "band": "weak"
+    },
+    {
+      "id": 13,
+      "name": "National Independent School (NIST)",
+      "shortName": "NIST",
+      "initials": "NI",
+      "logoColor": "#0891b2",
+      "type": "Private",
+      "gradeRange": "+2",
+      "location": "Kathmandu Valley",
+      "complaint": null,
+      "metrics": {
+        "schoolEnvironment": 37.5,
+        "infrastructure": 40.0,
+        "cost": 47.4,
+        "netBenefit": 35.0
+      },
+      "responses": 7,
+      "overallScore": 40.2,
+      "categories": {
+        "environment": 37.5,
+        "infrastructure": 40.0,
+        "cost": 52.6,
+        "benefit": 35.0,
+        "complaint": null
+      },
+      "rank": 43,
+      "band": "weak"
+    }
+  ],
+  "redFlags": [
+    {
+      "id": "budhanilkantha-school",
+      "name": "Budhanilkantha School",
+      "reasons": [
+        "Reports of a hostel environment characterized by bullying and intimidation."
+      ]
+    },
+    {
+      "id": "united-academy",
+      "name": "United Academy",
+      "reasons": [
+        "Reports of severe physical punishment allegedly imposed for disciplinary offences that had not been verified.",
+        "Reports of disciplinary action for alleged school-rule violations occurring outside school premises."
+      ]
+    },
+    {
+      "id": "kathmandu-model-college",
+      "name": "KMC Bagbazar",
+      "reasons": [
+        "Reports of physical punishment for minor disciplinary infractions, including using the washroom during class.",
+        "Reports of public humiliation and verbal abuse, including an allegation that a student was publicly called a “whore.”",
+        "Reports of sexual assault and sexual coercion allegedly involving school authorities, including allegations concerning female students.",
+        "Reports of students being verbally abused over family-related circumstances.",
+        "Reports of intrusive monitoring of students’ private lives and disciplinary action over alleged makeup use.",
+        "Reports of sexual misconduct by teachers, including alleged sexual assault of female students and the sending of inappropriate images through private messages. Allegations involving minors warrant particular scrutiny and appropriate safeguarding action.",
+        "Reports of teaching practices that discourage curiosity and rely heavily on rote memorization."
+      ]
+    },
+    {
+      "id": "st-marys-school",
+      "name": "St. Mary’s",
+      "reasons": [
+        "Reports of restrictive dress codes and alleged physical punishment associated with their enforcement.",
+        "Reports of practices raising concerns about student privacy and children’s rights.",
+        "Reports of religious instruction or practices alleged to exert undue influence on students’ beliefs.",
+        "Reports of restrictions on male-female interaction extending beyond school premises."
+      ]
+    },
+    {
+      "id": "graded-english-medium-school",
+      "name": "GEMS",
+      "reasons": [
+        "Reports of physical bullying or physical mistreatment by teachers."
+      ]
+    },
+    {
+      "id": "kavya",
+      "name": "Kavya",
+      "reasons": [
+        "Reports of staff allegedly physically beating students and making verbal threats."
+      ]
+    },
+    {
+      "id": "dav-school",
+      "name": "DAV",
+      "reasons": [
+        "Reports of parents being verbally abused over their children’s comparatively weak academic performance.",
+        "Reports of severe academic pressure and concerns about its potential effects on student well-being."
+      ]
+    },
+    {
+      "id": "vs-niketan-secondary-school",
+      "name": "VS Niketan",
+      "reasons": [
+        "Reports alleging that a teacher accused of rape was permitted to continue teaching. The circumstances and the school’s response require clarification."
+      ]
+    },
+    {
+      "id": "ace-higher-secondary-school",
+      "name": "Ace Higher Secondary",
+      "reasons": [
+        "Concerns regarding potentially misleading advertising and the authenticity of online reviews.",
+        "Reports that students were pressured or required to post five-star reviews of the school online."
+      ]
+    }
+  ]
+}

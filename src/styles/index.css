@@ -1,0 +1,891 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+/* ==========================================================================
+   Palette
+
+   Three brand colours — Ink Navy, Ivory, Muted Bronze — plus the derived
+   surfaces, ink ramp, rules and score bands documented in
+   docs/02-DESIGN-SYSTEM.md § 1.
+
+   These are the ONLY hex values allowed in the codebase. Everything below is
+   a reference to one of these variables.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces — one step up from canvas, always warmer than white */
+  --canvas: #f4ecd8;
+  --surface: #fbf7ec;
+  --raised: #ffffff;
+  --sunken: #ede3cb;
+
+  /* Ink ramp */
+  --ink: #131a2c;
+  --ink-muted: #4a4e5c;
+  --ink-faint: #6a655d;
+  --ink-inverse: #f4ecd8;
+
+  /* Rules — the signature of the design */
+  --rule: #131a2c;
+  --rule-soft: rgb(19 26 44 / 0.14);
+  --rule-strong: #8a6a35;
+
+  /* Accent.
+   *
+   * `bronze` is the brand value and is used for RULES, FILLS and UI chrome,
+   * where the 3:1 non-text threshold applies and it clears it comfortably.
+   *
+   * It is NOT used for text. At 13px on the ivory canvas the brand value is
+   * 4.25:1, which is below WCAG AA for normal text (4.5:1) — and this is the
+   * colour used for every link, eyebrow and rank numeral on the site.
+   * `bronze-ink` is the same hue darkened until it passes, and is what
+   * `text-bronze-ink` resolves to.
+   */
+  --bronze: #8a6a35;
+  /* Founding-era accents (docs/02-DESIGN-SYSTEM.md § Founding-era theme) */
+  --gold: #c9a45c;
+  --claret: #6b1f2a;
+  --brown: #4a3322;
+  --bronze-ink: #795c2e;
+  --bronze-soft: #e8dcc4;
+  --bronze-wash: #f2eada;
+
+  /* Score bands. Categorical, not status lights. */
+  --band-strong: #2f6b4f;
+  --band-fair: #795c2e;
+  --band-weak: #9a3b34;
+
+  /* Letter blue.
+   *
+   * A deep, desaturated navy-teal rather than a stock web blue: it shares the
+   * ink ramp's low saturation and dark value, so it sits beside bronze and
+   * ivory without fighting them. Used only for the founder-letter buttons —
+   * the one deliberately cool element on the page.
+   */
+  --letter: #2f5d7c;
+  --letter-deep: #24485f;
+  --letter-wash: #e3ebf0;
+}
+
+/* ==========================================================================
+   Theme tokens
+
+   `inline` makes the generated utilities reference var(--canvas) rather than
+   the resolved value.
+   ========================================================================== */
+
+@theme inline {
+  /* -- colour ------------------------------------------------------------ */
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-sunken: var(--sunken);
+
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-ink-inverse: var(--ink-inverse);
+
+  --color-rule: var(--rule);
+  --color-rule-soft: var(--rule-soft);
+  --color-rule-strong: var(--rule-strong);
+
+  --color-bronze: var(--bronze);
+  --color-gold: var(--gold);
+  --color-claret: var(--claret);
+  --color-brown: var(--brown);
+  --color-bronze-ink: var(--bronze-ink);
+  --color-bronze-soft: var(--bronze-soft);
+  --color-bronze-wash: var(--bronze-wash);
+
+  --color-band-strong: var(--band-strong);
+  --color-band-fair: var(--band-fair);
+  --color-band-weak: var(--band-weak);
+
+  --color-letter: var(--letter);
+  --color-letter-deep: var(--letter-deep);
+  --color-letter-wash: var(--letter-wash);
+
+  /* -- shadcn semantic contract -------------------------------------------
+   * shadcn primitives are written against semantic names (bg-primary,
+   * text-muted-foreground, ring-ring). Mapping them onto the tokens above
+   * means we retheme every primitive by editing this one block, and a future
+   * `shadcn add` still lands working rather than unstyled.
+   * Do not use these names in feature components — use the palette names.
+   */
+  --color-background: var(--canvas);
+  --color-foreground: var(--ink);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--ink);
+  --color-popover: var(--raised);
+  --color-popover-foreground: var(--ink);
+  --color-primary: var(--ink);
+  --color-primary-foreground: var(--ink-inverse);
+  --color-secondary: var(--bronze-soft);
+  --color-secondary-foreground: var(--ink);
+  --color-muted: var(--sunken);
+  --color-muted-foreground: var(--ink-muted);
+  --color-accent: var(--bronze-wash);
+  --color-accent-foreground: var(--ink);
+  --color-destructive: var(--band-weak);
+  --color-border: var(--rule-soft);
+  --color-input: var(--rule-soft);
+  --color-ring: var(--bronze);
+
+  /* -- type -------------------------------------------------------------- */
+  --font-serif: "Latin Modern Roman", "Iowan Old Style", "Palatino Linotype", Palatino,
+    Georgia, ui-serif, serif;
+  --font-sans: "Latin Modern Sans", "Avenir Next", "Segoe UI", ui-sans-serif, system-ui,
+    -apple-system, sans-serif;
+
+  /*
+   * The type scale from docs/02-DESIGN-SYSTEM.md § 2 lives in the `@utility`
+   * block at the bottom of this file, not here — those tokens also carry a
+   * font-family, and Tailwind's `text-*` utilities do not support a
+   * `--font-family` modifier. Keeping the whole scale in one place avoids
+   * defining it twice.
+   *
+   * Only 400 and 700 are ever used. Latin Modern has no 500/600, and asking for
+   * a missing weight makes the browser synthesise a faux bold that smears.
+   */
+
+  /* -- radius ------------------------------------------------------------
+   * Sharp by default. Round corners read as "web app"; sharp ones read as
+   * "printed". Only genuinely floating things get 8px. See § 3.
+   */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* -- shadow ------------------------------------------------------------
+   * Rules beat shadows. Shadows exist in exactly three places, and these are
+   * them: sticky header, sheet/dialog, mobile filter drawer.
+   */
+  --shadow-header: 0 1px 0 var(--rule-soft);
+  --shadow-sheet: 0 -8px 32px rgb(19 26 44 / 0.14), 0 -1px 0 var(--rule-soft);
+  --shadow-float: 0 4px 16px rgb(19 26 44 / 0.1), 0 0 0 1px var(--rule-soft);
+
+  /* -- motion ------------------------------------------------------------
+   * Named `brand` rather than `out` so it never shadows Tailwind's built-in
+   * `ease-out`. This is the one curve used for every entrance. No bounce.
+   */
+  --ease-brand: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-brand-inout: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* Breakpoints — adding one requires a token entry in § 3 of the design doc */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--rule-soft);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    color: var(--ink);
+    /* Latin Modern has no italic cut. Never let the browser slant it. */
+    font-style: normal;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* A visible focus ring everywhere, by default. Components never set
+     `outline: none` without providing a replacement. */
+  :focus-visible {
+    outline: 2px solid var(--bronze);
+    outline-offset: 2px;
+    border-radius: 1px;
+  }
+
+  ::selection {
+    background-color: var(--bronze-soft);
+    color: var(--ink);
+  }
+
+  /* Long school names must never overflow their cell.
+     "SOS Hermann Gmeiner Higher Secondary School" is the real test case. */
+  h1,
+  h2,
+  h3,
+  p,
+  dd,
+  dt {
+    overflow-wrap: break-word;
+  }
+
+  /* Reduced motion is enforced globally, not per component, so nothing can
+     animate by accident. Components additionally gate their transforms via
+     useReducedMotion(). */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ==========================================================================
+   Type scale
+
+   The full scale from docs/02-DESIGN-SYSTEM.md § 2, as composed utilities.
+
+   Each token carries its own font-family, so a component writes `type-title`
+   and gets Roman at the right size. Splitting family from size would let a
+   heading silently render in the sans, which is exactly the mistake that makes
+   an editorial site look like a dashboard.
+
+   Usage:  type-display · type-title · type-heading · type-subheading
+           type-body · type-body-lg · type-ui · type-label · type-caption
+           type-numeric-lg · type-numeric · type-numeric-sm
+   ========================================================================== */
+
+/* --- display: one per page, ever ---------------------------------------- */
+@utility type-display {
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+/* --- titles ------------------------------------------------------------- */
+@utility type-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+@utility type-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+/* --- prose: everything a reader reads is serif -------------------------- */
+@utility type-subheading {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+@utility type-body {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+@utility type-body-lg {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* --- interface: everything a reader operates is sans -------------------- */
+@utility type-ui {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Uppercase is only ever for labels, and always tracked. */
+@utility type-label {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@utility type-caption {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* --- numerals: always tabular so columns align on the decimal ----------- */
+@utility type-numeric-lg {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility type-numeric {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility type-numeric-sm {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+/* Prose measure. Capped hard — 68ch. */
+@utility measure {
+  max-width: 68ch;
+}
+
+@utility measure-tight {
+  max-width: 60ch;
+}
+
+@utility measure-snug {
+  max-width: 48ch;
+}
+
+/* Skips rendering work for off-screen content. Applied to below-the-fold
+   sections; `contain-intrinsic-size` keeps the scrollbar honest. */
+@utility defer-paint {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* ==========================================================================
+   Keyframes
+
+   All transform/opacity only. There is no animation library — see
+   docs/01-STACK.md § motion for the 40.2 kB measurement that drove that.
+   ========================================================================== */
+
+/* A score bar filling. Scales on the x axis, never animates `width`. */
+@keyframes score-bar-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Route transition: enter-only, 160ms. An exit animation would mean holding the
+   outgoing tree mounted for its duration, which adds directly to perceived
+   latency. */
+@keyframes route-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-route-in {
+  animation: route-in 160ms var(--ease-brand) both;
+}
+
+/* The 2-second contributor intro. Phases are driven by `useIntro` setting
+   `data-phase` on the overlay — the timing lives in CSS, so it runs on the
+   compositor and costs no main-thread time. See docs/05-PAGES.md § Intro. */
+@keyframes intro-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes intro-letters-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    letter-spacing: 0.3em;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    letter-spacing: normal;
+  }
+}
+
+@keyframes intro-rule-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes intro-dot-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes intro-person-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes intro-label-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes intro-overlay-out {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+@keyframes intro-strip-out {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+}
+
+/* --- founder letter popup ---------------------------------------------- */
+@keyframes message-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes message-backdrop-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes message-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes message-panel-out {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
+
+/*
+ * The popup's motion is decorative: everything it does (dim, rise, scale) is
+ * conveyed by position alone, so it can be dropped entirely without losing
+ * information. Panel and backdrop both carry `message-anim`.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .message-anim {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+  }
+}
+
+/* Letter scroll: a slim, quiet scrollbar so the panel reads as paper. */
+.message-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(19 26 44 / 0.25) transparent;
+}
+
+/* Portraits: force the browser to use a contrast-preserving downsampling
+   algorithm when shrinking high-res photos into small circles. Without this,
+   very large JPEGs rendered at ~100px can look pixelated/soft because the
+   browser’s default downsampling drops fine detail. */
+.portrait-img {
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: optimize-contrast !important;
+}
+
+.message-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.message-scroll::-webkit-scrollbar-thumb {
+  background: rgb(19 26 44 / 0.25);
+  border-radius: 3px;
+}
+
+.message-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* The page underneath settling as the overlay wipes away. */
+@keyframes page-settle {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*
+ * How long the page's entrance waits for the intro overlay to finish wiping.
+ *
+ * ZERO BY DEFAULT, and that is load-bearing. `page-settle` uses
+ * `animation-fill-mode: both`, so a non-zero delay pins the element at
+ * `opacity: 0` for the whole delay. A hardcoded 2080ms therefore means: on every
+ * repeat visit, under reduced motion, and with `?skipIntro=1` — all the cases
+ * where the intro never plays — the hero is invisible for two seconds.
+ *
+ * `IntroGate` adds `.intro-active` to <html> only while the overlay is genuinely
+ * on screen, which is the only case where waiting is correct.
+ * See docs/09-BUGS.md.
+ */
+:root {
+  --intro-reveal-delay: 0ms;
+}
+
+html.intro-active {
+  --intro-reveal-delay: 2080ms;
+}
+
+/* The score dial filling. `stroke-dashoffset` is paint-only, so this stays off
+   the layout path. Both endpoints come in as custom properties because the
+   target depends on the value being shown. */
+@keyframes dial-sweep {
+  from {
+    stroke-dashoffset: var(--dial-from);
+  }
+  to {
+    stroke-dashoffset: var(--dial-to);
+  }
+}
+
+/* ==========================================================================
+   Reveal on scroll
+
+   Sections and text blocks fade and rise into place as they enter the viewport.
+   Driven by `Reveal` / `useReveal()` toggling a class, so it is a CSS
+   transition (not an animation library). Runs on the compositor, and is
+   collapsed to instant by the global `prefers-reduced-motion` rule.
+   Elements that are already in viewport on load reveal immediately.
+   ========================================================================== */
+
+@keyframes text-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(24px) scale(0.97);
+  transition:
+    opacity 800ms var(--ease-brand),
+    transform 800ms var(--ease-brand);
+}
+
+@utility reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@utility animate-text-in {
+  animation: text-in 800ms var(--ease-brand) both;
+}
+
+/* ==========================================================================
+   Valley map
+
+   The hero's stylised map of the Kathmandu Valley. Two motions, both subtle:
+   the school points pulse, and the whole field drifts so it reads as alive
+   without moving the geography a reader is trying to read. Both are
+   transform/opacity only.
+   ========================================================================== */
+
+@keyframes map-point-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* The soft halo behind each school point. Kept dimmer than the point itself so
+   the halos read as a field of light rather than 43 copies of one dot. */
+@keyframes map-point-halo {
+  0%,
+  100% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes map-drift {
+  from {
+    transform: scale(1.02) translateY(0);
+  }
+  50% {
+    transform: scale(1.06) translateY(-10px);
+  }
+  to {
+    transform: scale(1.02) translateY(0);
+  }
+}
+
+/* The valley breathing: the centre glow swells and fades. */
+@keyframes map-breathe {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+/* Contour rings swelling outward, then settling back. */
+@keyframes map-ring {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.14;
+  }
+  50% {
+    transform: scale(1.07);
+    opacity: 0.05;
+  }
+}
+
+/* Pulse rings expanding from the valley's centre, fading as they travel. */
+@keyframes map-pulse-expand {
+  0% {
+    transform: scale(0.25);
+    opacity: 0.35;
+  }
+  70% {
+    opacity: 0.16;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* The river's dashed flow. `stroke-dashoffset` is paint-only. */
+@keyframes map-flow {
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+
+@utility animate-map-point {
+  animation: map-point-pulse 3.2s ease-in-out infinite;
+}
+
+@utility animate-map-halo {
+  animation: map-point-halo 3.2s ease-in-out infinite;
+}
+
+@utility animate-map-drift {
+  animation: map-drift 20s var(--ease-brand-inout) infinite;
+  transform-origin: center;
+}
+
+@utility animate-map-breathe {
+  animation: map-breathe 7s ease-in-out infinite;
+}
+
+@utility animate-map-ring {
+  animation: map-ring 16s var(--ease-brand-inout) infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@utility animate-map-pulse-expand {
+  animation: map-pulse-expand 5.2s var(--ease-brand) infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@utility animate-map-flow {
+  animation: map-flow 9s linear infinite;
+}
+
+
+/* ==========================================================================
+   Founding-era theme (James Madison)
+
+   Full-bleed dark bands. The oil portrait dissolves into the home band through
+   a mask; the footer carries the woodcut, inverted, at low opacity. Images live
+   in public/images/madison/. Decorative only — no meaning is carried by them.
+   ========================================================================== */
+
+.accent-mark {
+  height: 2px;
+  width: 28px;
+  background: var(--bronze);
+}
+
+.madison-hero,
+.madison-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-inline: calc(50% - 50vw);
+  padding: 3rem max(1rem, calc(50vw - 600px + 1.5rem));
+  background: var(--ink);
+  color: var(--ink-inverse);
+}
+
+.madison-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/madison/oil-1040.webp") right center / auto 100% no-repeat;
+  opacity: 0.55;
+  -webkit-mask-image: linear-gradient(to left, #000 0%, transparent 70%);
+  mask-image: linear-gradient(to left, #000 0%, transparent 70%);
+}
+
+.madison-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/madison/woodcut.webp") center / cover no-repeat;
+  filter: invert(1);
+  opacity: 0.08;
+}
+
+.madison-foot {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.madison-foot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/madison/woodcut.webp") center / cover no-repeat;
+  filter: invert(1);
+  opacity: 0.06;
+}
+
+/* Re-colour the text utilities used inside a dark band. */
+.on-dark .text-ink { color: var(--ink-inverse); }
+.on-dark .text-ink-muted { color: rgb(244 236 216 / 0.78); }
+.on-dark .text-ink-faint { color: rgb(244 236 216 / 0.6); }
+.on-dark .text-bronze-ink { color: var(--gold); }
+
+/* Intro splash: the portrait is the screen, dissolving into navy top and bottom. */
+.intro-portrait {
+  position: absolute;
+  inset: 0;
+  background: url("/images/madison/oil-1040.webp") center 20% / cover no-repeat;
+  opacity: 0.5;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 28%, #000 62%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 28%, #000 62%, transparent 100%);
+}
+
+.intro-frame {
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgb(201 164 92 / 0.3);
+  pointer-events: none;
+}
