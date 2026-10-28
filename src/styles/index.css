@@ -1087,48 +1087,51 @@ html.intro-active {
 }
 
 
-/***** Founder identity motifs: low-contrast marks, kept behind each portrait. *****/
-.founder-profile-card--vision {
-  border-top: 2px solid var(--gold);
+/* Distinct archival photographs sit inside each founder's complete frame. */
+.founder-profile-card {
+  isolation: isolate;
+  overflow: hidden;
+  border-color: rgb(138 106 53 / 0.68);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.55), 0 18px 42px -34px rgb(24 31 47 / 0.72);
 }
 
-.founder-profile-card--vision::before {
-  border-color: rgb(201 164 92 / 0.38);
+.founder-profile-card::before {
+  z-index: 1;
+  inset: 0.5rem;
+  border-color: rgb(138 106 53 / 0.42);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.5);
 }
 
-.founder-profile-card--vision::after {
-  content: "LIBERTÉ\A ÉGALITÉ\A FRATERNITÉ";
-  position: absolute;
-  top: 39%;
-  right: 0.85rem;
-  z-index: 0;
-  max-width: 8ch;
-  color: var(--claret);
-  font-family: var(--font-serif);
-  font-size: clamp(0.95rem, 2vw, 1.3rem);
-  font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: 0.08em;
-  text-align: right;
-  white-space: pre;
-  opacity: 0.1;
-  pointer-events: none;
-  user-select: none;
-}
-
-.founder-profile-card--president::after {
+.founder-profile-card::after {
   content: "";
   position: absolute;
-  top: 30%;
-  right: 12%;
+  inset: 0;
   z-index: 0;
-  width: 5.75rem;
-  height: 8rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140'%3E%3Cpath d='M12 8H87L57 66H12V8Zm0 58H94L57 132H12V66Z' fill='%23dc143c' stroke='%23003893' stroke-width='8' stroke-linejoin='miter'/%3E%3Cpath d='M27 39a12 12 0 1 0 24 0 12 12 0 1 1-24 0Zm-1 51a18 18 0 0 0 36 0l-4 8-4-6-6 4-5-5-6 3-4-8Z' fill='%23fff'/%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.1;
+  background:
+    linear-gradient(180deg, rgb(248 245 236 / 0.08) 0%, rgb(248 245 236 / 0.34) 40%, var(--surface) 88%),
+    var(--founder-backdrop) var(--founder-backdrop-position, center 42%) / cover no-repeat;
+  opacity: 0.62;
   pointer-events: none;
-  user-select: none;
+}
+
+.founder-profile-card > * {
+  z-index: 2;
+}
+
+.founder-profile-card--president {
+  --founder-backdrop: url("/images/founders/yogeshwor-mountain.jpg");
+  --founder-backdrop-position: center 40%;
+  border-top: 3px solid var(--claret);
+}
+
+.founder-profile-card--liberte {
+  --founder-backdrop: url("/images/founders/eron-liberte.jpg");
+  --founder-backdrop-position: center 44%;
+  border-top: 3px solid var(--gold);
+}
+
+@media (max-width: 48rem) {
+  .founder-profile-card::before {
+    inset: 0.42rem;
+  }
 }

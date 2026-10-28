@@ -140,7 +140,7 @@ export function AboutPage() {
                   Message from president
                 </Button>
               </div>
-              <div className="founder-profile-card founder-profile-card--vision">
+              <div className="founder-profile-card founder-profile-card--liberte">
                 <TeamCard
                   name="Eron Subedi"
                   role="Founder, Chief Architect & Chief of Investigations"
