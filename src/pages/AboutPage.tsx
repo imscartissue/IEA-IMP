@@ -209,9 +209,9 @@ export function AboutPage() {
           <h2 className="type-heading mt-4 text-ink">Who we answer to</h2>
           <ul className="mt-6 max-w-[46rem] border-y border-rule-soft">
             {[
-              "The Institute accepts no donations.",
-              "The Institute receives no funding from foreign organisations.",
-              "Every member of the Institute was born in Nepal.",
+              "IEA accepts no donations.",
+              "IEA receives no funding from foreign organisations.",
+              "All IEA members were born in Nepal.",
             ].map((line) => (
               <li
                 key={line}
