@@ -28,15 +28,22 @@ export function ScoreCell({
   className?: string;
 }) {
   const b = band(value);
+  const colorBand = invert
+    ? b === "strong"
+      ? "weak"
+      : b === "weak"
+        ? "strong"
+        : "fair"
+    : b;
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
       <div className="flex items-baseline gap-1.5">
         <span
           className={cn(
             "type-numeric-sm",
-            b === "strong" && "text-band-strong",
-            b === "fair" && "text-band-fair",
-            b === "weak" && "text-band-weak",
+            colorBand === "strong" && "text-band-strong",
+            colorBand === "fair" && "text-band-fair",
+            colorBand === "weak" && "text-band-weak",
           )}
         >
           {value.toFixed(1)}
@@ -47,7 +54,7 @@ export function ScoreCell({
           </span>
         ) : null}
       </div>
-      {bar ? <ScoreBar value={value} size="sm" label={`${value.toFixed(1)} out of 100`} /> : null}
+      {bar ? <ScoreBar value={value} size="sm" tone={colorBand} label={`${value.toFixed(1)} out of 100`} /> : null}
     </div>
   );
 }
