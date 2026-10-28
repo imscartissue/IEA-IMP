@@ -124,7 +124,7 @@ export function IntroGate({ children }: { children: ReactNode }) {
         {/* "Click anywhere to continue". */}
         <p
           className={cn(
-            "absolute inset-x-0 bottom-8 text-center type-caption sm:bottom-10",
+            "absolute inset-x-0 bottom-4 text-center type-caption sm:bottom-6",
             "px-4 text-ink-inverse/45",
             "animate-[intro-label-in_500ms_cubic-bezier(0.16,1,0.3,1)_both]",
           )}
