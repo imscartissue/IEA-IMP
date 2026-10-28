@@ -1,4 +1,3 @@
-import { Instagram } from "lucide-react";
 import { Link } from "react-router";
 
 import { Container } from "@/components/site/Container";
@@ -85,7 +84,21 @@ export function SiteFooter() {
                 title="Instagram"
                 className="mt-3 inline-flex size-10 items-center justify-center border border-ink-inverse/30 text-ink-inverse/80 transition-colors hover:border-gold hover:text-gold"
               >
-                <Instagram size={19} strokeWidth={1.8} aria-hidden="true" />
+                <svg
+                  width="19"
+                  height="19"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
+                </svg>
               </a>
             </div>
           </section>
