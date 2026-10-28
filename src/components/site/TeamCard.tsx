@@ -14,13 +14,11 @@ export function TeamCard({
   role,
   photo,
   featured = false,
-  descriptor,
 }: {
   name: string;
   role: string;
   photo?: string;
   featured?: boolean;
-  descriptor?: string;
 }) {
   return (
     <div className="flex flex-col items-center group">
@@ -46,9 +44,6 @@ export function TeamCard({
       </div>
 
       <div className="mt-4 flex flex-col items-center">
-        {descriptor ? (
-          <p className="mb-2 type-label text-bronze-ink">{descriptor}</p>
-        ) : null}
         <p className={cn(
           "font-serif font-bold text-ink leading-tight text-center transition-colors duration-300 ease-brand group-hover:text-bronze",
           featured
