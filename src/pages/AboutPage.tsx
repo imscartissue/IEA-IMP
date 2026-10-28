@@ -231,9 +231,8 @@ export function AboutPage() {
           <div className="max-w-[46rem] border-l-2 border-claret/70 pl-4 md:pl-6">
             <p className="type-label text-bronze-ink">Contact and disclosure policy</p>
             <p className="type-caption measure mt-3 text-ink-faint">
-              If a school contacts the Institute about its ranking, Institute policy mandates
-              the release of all materials underlying that ranking, whether the assessment is
-              favourable or adverse.
+              IEA will release an accurate summary of any communication from a school,
+              in accordance with applicable law.
             </p>
           </div>
         </Reveal>
