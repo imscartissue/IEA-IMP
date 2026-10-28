@@ -1,7 +1,6 @@
 import { useEffect, type ReactNode } from "react";
 import { useLocation } from "react-router";
 
-import { Monogram } from "@/components/data-display/Monogram";
 import { useIntro } from "@/hooks/useIntro";
 import { contributors } from "@/data/contributors";
 import { cn } from "@/lib/utils";
@@ -88,8 +87,7 @@ export function IntroGate({ children }: { children: ReactNode }) {
             : "animate-[intro-overlay-in_300ms_cubic-bezier(0.16,1,0.3,1)_both]",
         )}
       >
-        {/* The portrait is the screen: full-bleed, dissolving into navy at the
-            top (for the logo) and bottom (for the names). */}
+        {/* A quiet profile silhouette sits behind the content, low in contrast. */}
         <div className="intro-portrait" aria-hidden="true" />
         <div className="intro-frame" aria-hidden="true" />
 
@@ -103,52 +101,14 @@ export function IntroGate({ children }: { children: ReactNode }) {
         />
 
         <div className="relative flex w-full flex-col items-center gap-5">
-        {/* Founders row (2 names), shown horizontally with smaller type.
-            Photos load when you add them at public/people/<id>.jpg and set
-            `photo` in contributors.ts. */}
-        <div className="flex items-center justify-center gap-8 md:gap-12">
-          {firstLine.map((person, i) => (
-            <div
-              key={person.id}
-              className="flex flex-col items-center gap-1.5"
-              style={{ animationDelay: `${1250 + i * 60}ms` }}
-            >
-              <div className="relative size-20 sm:size-24">
-                {person.photo ? (
-                  <img
-                    src={person.photo}
-                    alt={person.name}
-                    className="w-full h-full object-cover rounded-full border border-ink-inverse/30 portrait-img"
-                  />
-                ) : (
-                  <Monogram name={person.name} size="lg" />
-                )}
-              </div>
-              <span
-                className={cn(
-                  "type-caption text-center text-ink-inverse/70 uppercase tracking-[0.1em]",
-                  phase === "contributors" || phase === "exiting"
-                    ? "animate-[intro-label-in_500ms_cubic-bezier(0.16,1,0.3,1)_both]"
-                    : "",
-                )}
-                style={{ animationDelay: `${1250 + i * 60}ms` }}
-              >
-                {person.name}
-              </span>
-              <span
-                className={cn(
-                  "type-caption text-center text-ink-inverse/45 normal-case tracking-[0.04em] max-w-[10rem]",
-                  phase === "contributors" || phase === "exiting"
-                    ? "animate-[intro-label-in_500ms_cubic-bezier(0.16,1,0.3,1)_both]"
-                    : "",
-                )}
-                style={{ animationDelay: `${1310 + i * 60}ms` }}
-              >
-                {person.role}
-              </span>
-            </div>
-          ))}
-        </div>
+        {/* Founders: names only, set small and low in contrast. No portraits —
+            the people are credited, not featured. */}
+        <p
+          className="type-caption text-center text-ink-inverse/40 tracking-[0.18em] uppercase animate-[intro-label-in_500ms_cubic-bezier(0.16,1,0.3,1)_both]"
+          style={{ animationDelay: "1250ms" }}
+        >
+          {firstLine.map((person) => person.name).join("  ·  ")}
+        </p>
 
         <div className="h-px w-full bg-gold/50 my-4 md:my-6" aria-hidden="true" />
 

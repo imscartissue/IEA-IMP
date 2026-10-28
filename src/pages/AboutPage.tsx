@@ -201,6 +201,31 @@ export function AboutPage() {
 
         <Rule />
 
+        {/* --- independence ------------------------------------------------- */}
+        <Reveal className="py-12 md:py-16" delayMs={220}>
+          <div className="flex items-center gap-3">
+            <AccentRule />
+            <span className="type-label text-bronze-ink">Independence</span>
+          </div>
+          <h2 className="type-heading mt-4 text-ink">Who we answer to</h2>
+          <ul className="mt-6 max-w-[46rem] border-y border-rule-soft">
+            {[
+              "The Institute accepts no donations.",
+              "The Institute receives no funding from foreign organisations.",
+              "Every member of the Institute was born in Nepal.",
+            ].map((line) => (
+              <li
+                key={line}
+                className="type-body-lg border-b border-rule-soft py-4 text-ink last:border-b-0"
+              >
+                {line}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+
+        <Rule />
+
         {/* --- provenance --------------------------------------------------- */}
         <Reveal className="py-12 md:py-16" delayMs={260}>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
@@ -212,6 +237,28 @@ export function AboutPage() {
             </Button>
           </div>
         </Reveal>
+
+        {/* --- intellectual foundations ------------------------------------
+            Deliberately last and small: context for those who read this far,
+            not a headline. */}
+        <Rule />
+        <section className="py-10 md:py-12">
+          <span className="type-label text-ink-faint">Intellectual foundations</span>
+          <h2 className="type-subheading mt-3 font-bold text-ink-muted">The Madisonian tradition</h2>
+          <div className="mt-4 flex flex-col gap-3">
+            <p className="type-caption measure text-ink-faint">
+              The Institute&rsquo;s founders hold that the ideas of James Madison remain
+              central to how freedom is understood and protected around the world: that
+              power must be checked, that those who hold it must answer to the people it
+              affects, and that open information is a precondition of self-government.
+            </p>
+            <p className="type-caption measure text-ink-faint">
+              These ideas shaped both why the Institute exists and how it works. One of
+              its founders has said that he would not have undertaken this project
+              without them, and this site is designed in that spirit.
+            </p>
+          </div>
+        </section>
 
         {/* --- founder letters --------------------------------------------- */}
         <MessageModal

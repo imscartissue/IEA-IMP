@@ -808,8 +808,8 @@ html.intro-active {
 /* ==========================================================================
    Founding-era theme (James Madison)
 
-   Full-bleed dark bands. The oil portrait dissolves into the home band through
-   a mask; the footer carries the woodcut, inverted, at low opacity. Images live
+   Full-bleed dark bands. The march photograph fades into the home band through
+   a mask; the intro carries a profile silhouette and the footer the woodcut, inverted, at low opacity. Images live
    in public/images/madison/. Decorative only — no meaning is carried by them.
    ========================================================================== */
 
@@ -835,10 +835,11 @@ html.intro-active {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: url("/images/madison/oil-1040.webp") right center / auto 100% no-repeat;
-  opacity: 0.55;
-  -webkit-mask-image: linear-gradient(to left, #000 0%, transparent 70%);
-  mask-image: linear-gradient(to left, #000 0%, transparent 70%);
+  background: url("/images/madison/march.webp") right center / auto 100% no-repeat;
+  filter: grayscale(1);
+  opacity: 0.4;
+  -webkit-mask-image: linear-gradient(to left, #000 0%, transparent 75%);
+  mask-image: linear-gradient(to left, #000 0%, transparent 75%);
 }
 
 .madison-banner::before {
@@ -873,14 +874,13 @@ html.intro-active {
 .on-dark .text-ink-faint { color: rgb(244 236 216 / 0.6); }
 .on-dark .text-bronze-ink { color: var(--gold); }
 
-/* Intro splash: the portrait is the screen, dissolving into navy top and bottom. */
+/* Intro splash: a quiet profile silhouette behind the content, centred and low
+   in contrast so the logo and the names stay the focus. */
 .intro-portrait {
   position: absolute;
   inset: 0;
-  background: url("/images/madison/oil-1040.webp") center 20% / cover no-repeat;
-  opacity: 0.5;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 28%, #000 62%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, #000 28%, #000 62%, transparent 100%);
+  background: url("/images/madison/profile-silhouette.png") center 55% / auto 62% no-repeat;
+  opacity: 0.14;
 }
 
 .intro-frame {
