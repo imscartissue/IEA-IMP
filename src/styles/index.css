@@ -1085,3 +1085,12 @@ html.intro-active {
     padding: 1.75rem 1rem;
   }
 }
+
+
+.founder-profile-card--vision {
+  border-top: 2px solid var(--gold);
+}
+
+.founder-profile-card--vision::before {
+  border-color: rgb(201 164 92 / 0.38);
+}
