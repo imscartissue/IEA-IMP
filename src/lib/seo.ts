@@ -14,7 +14,7 @@ import type { RedFlag, School } from "@/lib/types";
  * the first paint see them before this module is even loaded.
  */
 
-const SUFFIX = "IEA";
+const SUFFIX = "Institute for Educational Accountability";
 
 export type Seo = {
   title: string;
@@ -53,9 +53,8 @@ function build(pageTitle: string, description: string, extra: Partial<Seo> = {})
 }
 
 export const SEO = {
-  // Home title is the bare brand, deliberately: every other route carries a
-  // descriptive title, and the landing tab reads cleanest as just "IEA". The
-  // length check in check-a11y.mjs exempts "/" for exactly this reason.
+  // Use the full institute name on the home page so search results identify
+  // the organization without relying on its abbreviation.
   home: build(
     SUFFIX,
     "An independent examination of Nepali schools, grounded in verified student testimony, field inquiry, and credible public sources, undertaken to illuminate the institutions entrusted with educating the next generation.",
