@@ -1,3 +1,4 @@
+import { Instagram } from "lucide-react";
 import { Link } from "react-router";
 
 import { Container } from "@/components/site/Container";
@@ -14,7 +15,7 @@ export function SiteFooter() {
   return (
     <footer className="madison-foot mt-16 border-t-4 border-double border-gold bg-ink text-ink-inverse md:mt-24">
       <Container>
-        <div className="grid gap-10 py-12 md:grid-cols-[2fr_1fr_1fr] md:gap-12 md:py-16">
+        <div className="grid gap-10 py-12 md:grid-cols-2 md:gap-12 md:py-16 xl:grid-cols-4">
           <div>
             <img
               src="/brand/stacked-dark.webp"
@@ -49,6 +50,45 @@ export function SiteFooter() {
               <Datum term="Published" value={formatDate(meta.publicationDate)} />
             </dl>
           </div>
+
+          <section aria-labelledby="footer-contact-heading">
+            <h2 id="footer-contact-heading" className="type-label text-ink-inverse/50">
+              Contact us
+            </h2>
+            <address className="mt-4 space-y-3 not-italic">
+              <ContactLine label="General enquiries" email="info@ieainstitute.org" />
+              <ContactLine label="Founder enquiries" email="founder@ieainstitute.org" />
+            </address>
+
+            <div className="mt-5 border-t border-ink-inverse/15 pt-4">
+              <p className="type-caption text-ink-inverse/65">
+                Requests for underlying sources and supporting evidence are considered only from
+                government bodies, international watchdogs, and human rights institutions.
+              </p>
+              <a
+                href="mailto:request@ieainstitute.org"
+                className="type-ui mt-2 inline-block text-ink-inverse/80 underline decoration-1 underline-offset-4 transition-colors hover:text-ink-inverse hover:decoration-bronze"
+              >
+                request@ieainstitute.org
+              </a>
+            </div>
+
+            <div className="mt-5 border-t border-ink-inverse/15 pt-4">
+              <p className="type-caption text-ink-inverse/65">
+                Interested in joining IEA? Find the membership form on our Instagram page.
+              </p>
+              <a
+                href="https://www.instagram.com/theinstituteforea?utm_source=ig_web_button_share_sheet&rpxt=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit the Institute for Educational Accountability on Instagram"
+                title="Instagram"
+                className="mt-3 inline-flex size-10 items-center justify-center border border-ink-inverse/30 text-ink-inverse/80 transition-colors hover:border-gold hover:text-gold"
+              >
+                <Instagram size={19} strokeWidth={1.8} aria-hidden="true" />
+              </a>
+            </div>
+          </section>
         </div>
 
         <Rule className="bg-ink-inverse/15" />
@@ -82,5 +122,19 @@ function Datum({ term, value }: { term: string; value: string }) {
       <dt className="type-caption text-ink-inverse/50">{term}</dt>
       <dd className="type-numeric-sm text-ink-inverse/80">{value}</dd>
     </div>
+  );
+}
+
+function ContactLine({ label, email }: { label: string; email: string }) {
+  return (
+    <p>
+      <span className="type-caption block text-ink-inverse/55">{label}</span>
+      <a
+        href={`mailto:${email}`}
+        className="type-ui text-ink-inverse/80 underline decoration-1 underline-offset-4 transition-colors hover:text-ink-inverse hover:decoration-bronze"
+      >
+        {email}
+      </a>
+    </p>
   );
 }
