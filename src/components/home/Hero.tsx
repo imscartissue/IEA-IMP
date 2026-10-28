@@ -37,7 +37,14 @@ export function Hero() {
           <div className="min-w-0">
             <div className="mb-5 flex items-center gap-3">
               <span className="accent-mark" aria-hidden="true" />
-              <p className="type-label text-gold">Institute for Educational Accountability</p>
+              <p
+                aria-label="Institute for Educational Accountability"
+                className="type-label max-w-[15rem] text-xs leading-snug tracking-[0.07em] text-gold sm:max-w-none sm:text-sm sm:tracking-[0.14em]"
+              >
+                <span aria-hidden="true">
+                  Institute for Educational<br className="sm:hidden" /> Accountability
+                </span>
+              </p>
             </div>
             <span className="type-label text-bronze-ink">Edition {meta.edition}</span>
 
