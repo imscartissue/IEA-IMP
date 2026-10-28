@@ -47,7 +47,7 @@ export function TeamCard({
         <p className={cn(
           "font-serif font-bold text-ink leading-tight text-center transition-colors duration-300 ease-brand group-hover:text-bronze",
           featured
-            ? "min-w-[14rem] border border-bronze/60 bg-bronze-soft/20 px-4 py-2 text-[1rem] sm:text-[1.125rem]"
+            ? "min-w-[14rem] px-2 py-1 text-[1rem] sm:text-[1.125rem]"
             : "text-[0.9375rem] sm:text-[1rem]",
         )}>
           {name}
