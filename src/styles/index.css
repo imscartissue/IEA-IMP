@@ -23,8 +23,6 @@
 
   /* Ink ramp */
   --ink: #131a2c;
-  /* Deep blue-green reserved for the landing masthead. */
-  --home-hero: #263e4a;
   --ink-muted: #4a4e5c;
   --ink-faint: #6a655d;
   --ink-inverse: #f4ecd8;
@@ -830,10 +828,6 @@ html.intro-active {
   padding: 3rem max(1rem, calc(50vw - 600px + 1.5rem));
   background: var(--ink);
   color: var(--ink-inverse);
-}
-
-.madison-hero {
-  background: var(--home-hero);
 }
 
 .madison-hero::before {

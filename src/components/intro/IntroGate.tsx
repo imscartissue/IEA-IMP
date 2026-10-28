@@ -78,7 +78,7 @@ export function IntroGate({ children }: { children: ReactNode }) {
         data-intro-phase={phase}
         onClick={dismiss}
         className={cn(
-          "fixed inset-0 z-50 flex flex-col items-center justify-between bg-ink px-6 pb-12 pt-10 sm:pt-12",
+          "fixed inset-0 z-50 flex flex-col items-center justify-between bg-brown px-6 pb-12 pt-10 sm:pt-12",
           // Never interactive. Kept on during the exit too, so a click lands on
           // the page underneath rather than the overlay.
           "pointer-events-none",
