@@ -35,6 +35,10 @@ export function Hero() {
       <div className="animate-[page-settle_420ms_cubic-bezier(0.16,1,0.3,1)_both]">
         <div className="grid items-center gap-x-10 gap-y-6 xl:grid-cols-[minmax(0,1fr)_auto]">
           <div className="min-w-0">
+            <div className="mb-5 flex items-center gap-3">
+              <span className="accent-mark" aria-hidden="true" />
+              <p className="type-label text-gold">Institute for Educational Accountability</p>
+            </div>
             <span className="type-label text-bronze-ink">Edition {meta.edition}</span>
 
             <h1
