@@ -1087,10 +1087,48 @@ html.intro-active {
 }
 
 
+/***** Founder identity motifs: low-contrast marks, kept behind each portrait. *****/
 .founder-profile-card--vision {
   border-top: 2px solid var(--gold);
 }
 
 .founder-profile-card--vision::before {
   border-color: rgb(201 164 92 / 0.38);
+}
+
+.founder-profile-card--vision::after {
+  content: "LIBERTÉ\\A ÉGALITÉ\\A FRATERNITÉ";
+  position: absolute;
+  top: 39%;
+  right: 0.85rem;
+  z-index: 0;
+  max-width: 8ch;
+  color: var(--claret);
+  font-family: var(--font-serif);
+  font-size: clamp(0.95rem, 2vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 0.08em;
+  text-align: right;
+  white-space: pre;
+  opacity: 0.1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.founder-profile-card--president::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 12%;
+  z-index: 0;
+  width: 5.75rem;
+  height: 8rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140'%3E%3Cpath d='M12 8H87L57 66H12V8Zm0 58H94L57 132H12V66Z' fill='%23dc143c' stroke='%23003893' stroke-width='8' stroke-linejoin='miter'/%3E%3Cpath d='M27 39a12 12 0 1 0 24 0 12 12 0 1 1-24 0Zm-1 51a18 18 0 0 0 36 0l-4 8-4-6-6 4-5-5-6 3-4-8Z' fill='%23fff'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.1;
+  pointer-events: none;
+  user-select: none;
 }
