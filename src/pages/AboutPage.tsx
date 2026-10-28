@@ -207,20 +207,10 @@ export function AboutPage() {
             <span className="type-label text-bronze-ink">Institutional independence</span>
           </div>
           <h2 className="type-heading mt-4 text-ink">Who we answer to</h2>
-          <ul className="mt-6 max-w-[46rem] border-y border-rule-soft">
-            {[
-              "IEA accepts no donations.",
-              "IEA receives no funding from foreign organisations.",
-              "All IEA members were born in Nepal.",
-            ].map((line) => (
-              <li
-                key={line}
-                className="type-body-lg border-b border-rule-soft py-4 text-ink last:border-b-0"
-              >
-                {line}
-              </li>
-            ))}
-          </ul>
+          <p className="type-body-lg mt-6 max-w-[46rem] text-ink">
+            IEA does not accept donations or receive funding from foreign
+            organisations. Every member of the Institute was born in Nepal.
+          </p>
         </Reveal>
 
         <Rule />

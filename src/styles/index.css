@@ -1125,7 +1125,7 @@ html.intro-active {
 }
 
 .founder-profile-card--president {
-  --founder-backdrop: url("/images/founders/yogeshwor-mountain.jpg");
+  --founder-backdrop: url("/images/founders/yogeshwor-view.webp");
   --founder-backdrop-position: center 40%;
   border-top: 3px solid var(--letter);
 }
