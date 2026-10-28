@@ -14,6 +14,21 @@ import { cn } from "@/lib/utils";
  * plain note rather than a number and a bar. Rendering "0" there would be a
  * lie about the data.
  */
+/**
+ * Tailwind v4 only emits classes it can find as complete strings in source, so
+ * `border-l-band-${band}` would never be generated. Keep full class names here.
+ */
+const BORDER: Record<"strong" | "fair" | "weak", string> = {
+  strong: "border-l-band-strong",
+  fair: "border-l-band-fair",
+  weak: "border-l-band-weak",
+};
+const TEXT: Record<"strong" | "fair" | "weak", string> = {
+  strong: "text-band-strong",
+  fair: "text-band-fair",
+  weak: "text-band-weak",
+};
+
 export function MetricCard({
   category,
   score,
@@ -31,7 +46,7 @@ export function MetricCard({
     <div
       className={cn(
         "flex flex-col gap-3 border-l-[3px] bg-surface py-5 pr-5 pl-5",
-        unscored ? "border-l-rule-soft" : `border-l-band-${band(score)}`,
+        unscored ? "border-l-rule-soft" : BORDER[band(score)],
       )}
     >
       <div className="flex items-baseline justify-between gap-4">
@@ -39,7 +54,7 @@ export function MetricCard({
         {unscored ? (
           <span className="type-caption shrink-0 text-ink-faint">not scored</span>
         ) : (
-          <span className={cn("type-numeric shrink-0", `text-band-${band(score)}`)}>
+          <span className={cn("type-numeric shrink-0", TEXT[band(score)])}>
             {score.toFixed(1)}
           </span>
         )}

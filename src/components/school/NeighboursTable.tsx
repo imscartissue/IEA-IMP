@@ -35,7 +35,7 @@ export function NeighboursTable({ school }: { school: School }) {
               className="flex items-center gap-4 py-3 transition-colors hover:bg-bronze-wash"
               aria-label={`Rank ${other.rank}, ${other.name}, overall ${other.overallScore.toFixed(1)}`}
             >
-              <span className="w-8 shrink-0 text-right font-serif text-numeric-sm text-ink-faint">
+              <span className="w-8 shrink-0 text-right type-numeric-sm text-ink-faint">
                 {other.rank}
               </span>
 

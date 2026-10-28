@@ -15,6 +15,9 @@ import { cn } from "@/lib/utils";
  * visible on the dial itself — a reader should be able to see *where* "fair"
  * ends without consulting a legend.
  */
+/** Full class names so Tailwind v4 can see them (no `text-band-${b}`). */
+const BAND_TEXT = { strong: "text-band-strong", fair: "text-band-fair", weak: "text-band-weak" } as const;
+
 export function ScoreDial({ value, size = 200, className }: { value: number; size?: number; className?: string }) {
   const b = band(value);
   const clamped = Math.max(0, Math.min(100, value));
@@ -101,7 +104,7 @@ export function ScoreDial({ value, size = 200, className }: { value: number; siz
       </svg>
 
       <div className="relative z-10 flex flex-col items-center">
-        <span className={cn("type-numeric-lg leading-none", `text-band-${b}`)}>
+        <span className={cn("type-numeric-lg leading-none", BAND_TEXT[b])}>
           {clamped.toFixed(1)}
         </span>
         <span className="type-label mt-1.5 text-ink-faint">{BAND_LABEL[b]}</span>

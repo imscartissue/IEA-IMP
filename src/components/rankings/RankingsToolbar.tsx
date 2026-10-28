@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 import { Menu, MenuItem, MenuPanel, MenuTrigger } from "@/components/ui/menu";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import {
   ALL_COLUMNS,
@@ -289,9 +289,11 @@ export function RankingsToolbar({
                 </div>
               </div>
 
-              <Button onClick={onReset} variant="default" className="w-full">
-                Show {shown} of {total} schools
-              </Button>
+              <SheetClose asChild>
+                <Button variant="default" className="w-full">
+                  Show {shown} of {total} schools
+                </Button>
+              </SheetClose>
             </SheetContent>
           </Sheet>
         </div>
