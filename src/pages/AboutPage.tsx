@@ -229,10 +229,12 @@ export function AboutPage() {
         {/* --- contact and disclosure -------------------------------------- */}
         <Reveal className="py-8 md:py-10" delayMs={240}>
           <div className="max-w-[46rem] border-l-2 border-claret/70 pl-4 md:pl-6">
-            <p className="type-label text-bronze-ink">Contact and disclosure policy</p>
+            <p className="type-label text-claret">Notice to schools · Communications may be disclosed</p>
             <p className="type-caption measure mt-3 text-ink-faint">
-              IEA will release an accurate summary of any communication from a school,
-              in accordance with applicable law.
+              Any school that contacts IEA, for any reason, should expect a public, accurate
+              summary of its communication. Calls will be recorded only after participants have
+              been informed and have consented. IEA will publish summaries only as permitted by
+              applicable law.
             </p>
           </div>
         </Reveal>
