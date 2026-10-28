@@ -1097,7 +1097,7 @@ html.intro-active {
 }
 
 .founder-profile-card--vision::after {
-  content: "LIBERTÉ\\A ÉGALITÉ\\A FRATERNITÉ";
+  content: "LIBERTÉ\A ÉGALITÉ\A FRATERNITÉ";
   position: absolute;
   top: 39%;
   right: 0.85rem;
