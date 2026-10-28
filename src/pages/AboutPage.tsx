@@ -126,7 +126,7 @@ export function AboutPage() {
           <section className="relative mb-14 md:mb-20">
             <div className="absolute inset-0 -z-10 bg-bronze-soft/40 rounded-2xl blur-3xl" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
-              <div className="founder-profile-card">
+              <div className="founder-profile-card founder-profile-card--president">
                 <TeamCard
                   name="Yogeshwor Sharma"
                   role="Founder, President, & Head of Operations"
@@ -143,7 +143,6 @@ export function AboutPage() {
               <div className="founder-profile-card founder-profile-card--vision">
                 <TeamCard
                   name="Eron Subedi"
-                  descriptor="Vision & intellectual direction"
                   role="Founder, Chief Architect & Chief of Investigations"
                   featured
                   photo={photoByName.get("Eron Subedi")}
