@@ -889,3 +889,165 @@ html.intro-active {
   border: 1px solid rgb(201 164 92 / 0.3);
   pointer-events: none;
 }
+
+
+/* Restrained red-flag treatment: deep claret, shadow and the demonstration
+   photograph blended into the page rather than presented as a separate card. */
+.red-flag-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-top: 2px solid var(--claret);
+  background:
+    linear-gradient(110deg, rgb(19 10 15 / 0.98) 0%, rgb(34 14 21 / 0.94) 50%, rgb(54 19 28 / 0.86) 100%);
+  color: var(--ink-inverse);
+}
+
+.red-flag-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/red-flag-students.svg") right center / cover no-repeat;
+  filter: grayscale(1) contrast(1.12) sepia(0.18);
+  opacity: 0.28;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 46%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 46%, #000 100%);
+  pointer-events: none;
+}
+
+.red-flag-panel .text-ink-faint {
+  color: rgb(244 236 216 / 0.72);
+}
+
+.red-flag-alert {
+  background: linear-gradient(90deg, #32131b, var(--claret));
+  color: var(--ink-inverse);
+  border-bottom: 1px solid rgb(201 164 92 / 0.28);
+}
+
+.red-flag-page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f1e7d8 0%, var(--canvas) 48rem);
+}
+
+.red-flag-detail-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-inline: calc(50% - 50vw);
+  padding: 2.5rem max(1rem, calc(50vw - 600px + 1.5rem)) 3rem;
+  background: linear-gradient(105deg, rgb(20 10 15 / 0.98) 0%, rgb(39 15 23 / 0.94) 54%, rgb(61 22 32 / 0.72) 100%);
+  color: var(--ink-inverse);
+}
+
+.red-flag-detail-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/red-flag-students.svg") right 38% / cover no-repeat;
+  filter: grayscale(1) contrast(1.12) sepia(0.2);
+  opacity: 0.3;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 40%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 40%, #000 100%);
+  pointer-events: none;
+}
+
+.red-flag-reason-list > li {
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.red-flag-reason-list > li::before {
+  content: "";
+  position: absolute;
+  inset: 1.5rem auto 1.5rem 0;
+  width: 2px;
+  background: var(--claret);
+  opacity: 0.62;
+}
+
+
+.top-table-panel {
+  border-top: 2px solid var(--bronze);
+  padding-top: 1rem;
+}
+
+.red-flag-summary-card {
+  border: 1px solid rgb(201 164 92 / 0.38);
+  border-top: 2px solid var(--gold);
+  background: rgb(19 10 15 / 0.62);
+  padding: 1rem 1.125rem;
+  backdrop-filter: blur(3px);
+}
+
+.red-flag-summary-card .text-ink-inverse {
+  color: var(--ink-inverse);
+}
+
+
+/* Late-page institutional statement: a formal framed panel that rewards a
+   reader who reaches the end of the About page without interrupting the opening. */
+.institutional-legal-position {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-inline: calc(50% - 50vw);
+  padding: 2.75rem max(1rem, calc(50vw - 600px + 1.5rem));
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(107 31 42 / 0.55), transparent 48%),
+    linear-gradient(125deg, var(--ink) 0%, #1a1420 58%, #32151e 100%);
+  border-block: 1px solid rgb(201 164 92 / 0.55);
+  color: var(--ink-inverse);
+}
+
+.institutional-legal-position::before {
+  content: "";
+  position: absolute;
+  inset: 0.75rem;
+  z-index: -1;
+  border: 1px solid rgb(201 164 92 / 0.2);
+  pointer-events: none;
+}
+
+.legal-position-content {
+  position: relative;
+  z-index: 1;
+}
+
+.legal-position-mark {
+  position: absolute;
+  top: -3.5rem;
+  right: max(1rem, calc(50vw - 600px + 1.5rem));
+  z-index: 0;
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size: clamp(15rem, 28vw, 26rem);
+  line-height: 1;
+  opacity: 0.055;
+  pointer-events: none;
+  user-select: none;
+}
+
+.legal-position-copy {
+  max-width: 68ch;
+}
+
+@media (max-width: 48rem) {
+  .institutional-legal-position {
+    padding-block: 2rem;
+  }
+
+  .institutional-legal-position::before {
+    inset: 0.45rem;
+  }
+
+  .legal-position-mark {
+    top: -1rem;
+    right: 0.5rem;
+    font-size: 13rem;
+  }
+}

@@ -205,7 +205,7 @@ export function AboutPage() {
         <Reveal className="py-12 md:py-16" delayMs={220}>
           <div className="flex items-center gap-3">
             <AccentRule />
-            <span className="type-label text-bronze-ink">Independence</span>
+            <span className="type-label text-bronze-ink">Institutional independence</span>
           </div>
           <h2 className="type-heading mt-4 text-ink">Who we answer to</h2>
           <ul className="mt-6 max-w-[46rem] border-y border-rule-soft">
@@ -222,6 +222,20 @@ export function AboutPage() {
               </li>
             ))}
           </ul>
+        </Reveal>
+
+        <Rule />
+
+        {/* --- contact and disclosure -------------------------------------- */}
+        <Reveal className="py-8 md:py-10" delayMs={240}>
+          <div className="max-w-[46rem] border-l-2 border-claret/70 pl-4 md:pl-6">
+            <p className="type-label text-bronze-ink">Contact and disclosure policy</p>
+            <p className="type-caption measure mt-3 text-ink-faint">
+              If a school contacts the Institute about its ranking, Institute policy mandates
+              the release of all materials underlying that ranking, whether the assessment is
+              favourable or adverse.
+            </p>
+          </div>
         </Reveal>
 
         <Rule />
@@ -247,18 +261,58 @@ export function AboutPage() {
           <h2 className="type-subheading mt-3 font-bold text-ink-muted">The Madisonian tradition</h2>
           <div className="mt-4 flex flex-col gap-3">
             <p className="type-caption measure text-ink-faint">
-              The Institute&rsquo;s founders hold that the ideas of James Madison remain
-              central to how freedom is understood and protected around the world: that
-              power must be checked, that those who hold it must answer to the people it
-              affects, and that open information is a precondition of self-government.
-            </p>
-            <p className="type-caption measure text-ink-faint">
-              These ideas shaped both why the Institute exists and how it works. One of
-              its founders has said that he would not have undertaken this project
-              without them, and this site is designed in that spirit.
+              The founder holds that the ideas of James Madison remain central to how
+              freedom is understood and protected around the world: that power must be
+              checked, that those who hold it must answer to the people it affects, and
+              that open information is a precondition of self-government. These principles
+              inform the Institute&rsquo;s purpose and practice. The founder has stated
+              that he would not have undertaken this project without them, and the
+              Institute seeks to conduct its work in that spirit.
             </p>
           </div>
         </section>
+
+        {/* --- institutional legal position -------------------------------- */}
+        <Reveal className="py-12 md:py-16" delayMs={300}>
+          <section className="institutional-legal-position" aria-labelledby="legal-position-title">
+            <span className="legal-position-mark" aria-hidden="true">§</span>
+            <div className="legal-position-content">
+              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-gold/35 pb-5">
+                <div className="flex items-center gap-3">
+                  <span className="accent-mark" />
+                  <p className="type-label text-gold">Institutional position · Legal action</p>
+                </div>
+                <span className="type-caption text-ink-inverse/55">IEA / PUBLIC STATEMENT</span>
+              </div>
+
+              <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(15rem,0.75fr)_minmax(0,1.5fr)] lg:gap-16">
+                <div>
+                  <p className="type-label text-gold/80">Principle and remedy</p>
+                  <h2 id="legal-position-title" className="type-title mt-4 max-w-[18ch] text-ink-inverse">
+                    Institutional Position on Individualized Legal Action
+                  </h2>
+                  <div className="mt-6 h-px w-20 bg-gold" />
+                </div>
+
+                <div className="legal-position-copy flex flex-col gap-5">
+                  <p className="type-body-lg text-ink-inverse/90">
+                    The Institute for Educational Accountability (IEA) generally seeks to address systemic failures in educational accountability rather than single out individual schools. Our work is guided by evidence, institutional reform, and the public interest.
+                  </p>
+                  <p className="type-body-lg text-ink-inverse/90">
+                    However, this approach should not be mistaken for a relinquishment of our legal rights. Where an individual school initiates legal proceedings against IEA, engages in unlawful conduct against the Institute, or otherwise seeks to obstruct its legitimate activities, IEA reserves the right to pursue appropriate individualized legal remedies, including counterclaims and independent legal proceedings where justified by the facts and applicable law.
+                  </p>
+                  <p className="type-body-lg text-ink-inverse/90">
+                    Where relevant and legally permissible, such proceedings may include the presentation of documented evidence and student accounts concerning the school&rsquo;s conduct. Evidence collected through our research may be submitted to the competent judicial authorities when appropriate, subject to applicable evidentiary rules, confidentiality obligations, and the protection of students&rsquo; identities where required.
+                  </p>
+                  <p className="type-body-lg text-ink-inverse/90">
+                    IEA remains committed to the rule of law. Our preference for systemic reform does not preclude pursuing accountability against individual institutions when circumstances warrant it.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        </Reveal>
 
         {/* --- founder letters --------------------------------------------- */}
         <MessageModal

@@ -53,7 +53,7 @@ export function Hero() {
           </div>
 
           <div className="flex flex-col gap-3 justify-self-start md:justify-self-end">
-            <Button asChild size="lg" className="w-full bg-ink-inverse text-ink hover:bg-bronze-soft sm:w-auto">
+            <Button asChild size="lg" className="w-full border border-gold bg-gold text-ink hover:bg-bronze-soft sm:w-auto">
               <Link to="/rankings">View the rankings</Link>
             </Button>
             <div className="flex flex-col gap-1 sm:flex-row sm:gap-4">
@@ -96,8 +96,8 @@ export function Hero() {
       {/* Red-flag spotlight + top of the table, side by side. */}
       <div className="grid gap-12 pt-10 md:grid-cols-2 md:gap-16">
         <Reveal className="min-w-0" delayMs={120}>
-          <div className="min-w-0">
-            <h2 className="type-label">
+          <div className="red-flag-panel min-w-0 px-5 py-6 md:px-7">
+            <h2 className="type-label text-gold">
               <Link
                 to="/rankings?view=redflags"
                 className="rounded-sm text-ink-faint underline decoration-1 underline-offset-4 transition-colors duration-[120ms] hover:text-bronze-ink"
@@ -110,20 +110,20 @@ export function Hero() {
                 <Link
                   key={redFlag.id}
                   to={`/red-flag/${redFlag.id}`}
-                  className="group flex min-w-0 items-stretch gap-3 rounded-sm border border-rule-soft bg-surface p-3 transition-colors duration-[120ms] hover:border-band-weak"
+                  className="group flex min-w-0 items-stretch gap-3 rounded-sm border border-ink-inverse/25 bg-claret/35 p-3 transition-colors duration-[120ms] hover:border-gold"
                 >
                   <span aria-hidden="true" className="w-1 shrink-0 bg-band-weak" />
                   <div className="min-w-0 flex-1">
-                    <p className="truncate font-serif text-[0.9375rem] font-bold text-ink group-hover:underline">
+                    <p className="truncate font-serif text-[0.9375rem] font-bold text-ink-inverse group-hover:underline">
                       {redFlag.name}
                     </p>
-                    <p className="type-caption mt-1 line-clamp-2 text-ink-muted">
+                    <p className="type-caption mt-1 line-clamp-2 text-ink-inverse/75">
                       {redFlag.reasons[0] ?? "Published reasons pending."}
                     </p>
                   </div>
                   <span
                     aria-hidden="true"
-                    className="shrink-0 self-center text-ink-faint transition-transform duration-[120ms] group-hover:translate-x-0.5"
+                    className="shrink-0 self-center text-gold transition-transform duration-[120ms] group-hover:translate-x-0.5"
                   >
                     →
                   </span>
@@ -132,7 +132,7 @@ export function Hero() {
             </div>
             <Link
               to="/rankings?view=redflags"
-              className="type-caption mt-4 inline-block text-bronze-ink underline decoration-1 underline-offset-4 hover:decoration-2"
+              className="type-caption mt-4 inline-block text-gold underline decoration-1 underline-offset-4 hover:decoration-2"
             >
               See all {redFlags.length} flagged schools
             </Link>
@@ -140,8 +140,8 @@ export function Hero() {
         </Reveal>
 
         <Reveal className="min-w-0" delayMs={180}>
-          <aside className="min-w-0">
-            <h2 className="type-label">
+          <aside className="top-table-panel min-w-0">
+            <h2 className="type-heading font-bold">
               <Link
                 to="/rankings?view=all"
                 className="rounded-sm text-ink-faint underline decoration-1 underline-offset-4 transition-colors duration-[120ms] hover:text-bronze-ink"
@@ -160,7 +160,7 @@ export function Hero() {
                       to={`/school/${school.id}`}
                       className="flex min-w-0 items-baseline gap-2 rounded-sm"
                     >
-                      <span className="font-serif type-numeric-sm text-bronze-ink">
+                      <span className="inline-flex size-7 shrink-0 items-center justify-center border border-bronze/50 bg-bronze-wash font-serif text-sm font-bold text-bronze-ink">
                         {school.rank}
                       </span>
                       <span className="truncate font-serif text-[0.9375rem] font-bold text-ink hover:underline">

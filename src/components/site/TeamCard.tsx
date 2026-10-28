@@ -46,7 +46,9 @@ export function TeamCard({
       <div className="mt-4 flex flex-col items-center">
         <p className={cn(
           "font-serif font-bold text-ink leading-tight text-center transition-colors duration-300 ease-brand group-hover:text-bronze",
-          featured ? "text-[1rem] sm:text-[1.125rem]" : "text-[0.9375rem] sm:text-[1rem]",
+          featured
+            ? "min-w-[14rem] border border-bronze/60 bg-bronze-soft/20 px-4 py-2 text-[1rem] sm:text-[1.125rem]"
+            : "text-[0.9375rem] sm:text-[1rem]",
         )}>
           {name}
         </p>

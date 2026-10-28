@@ -57,9 +57,7 @@ export function SiteFooter() {
           &ldquo;If men were angels, no government would be necessary.&rdquo; James Madison,
           Federalist No. 51
         </p>
-        <p className="type-caption measure pb-6 pt-2 text-ink-inverse/50">
-          Typefaces are Latin Modern (GUST Font License).
-        </p>
+
       </Container>
     </footer>
   );
