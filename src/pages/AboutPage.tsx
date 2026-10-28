@@ -140,9 +140,10 @@ export function AboutPage() {
                   Message from president
                 </Button>
               </div>
-              <div className="founder-profile-card">
+              <div className="founder-profile-card founder-profile-card--vision">
                 <TeamCard
                   name="Eron Subedi"
+                  descriptor="Vision & intellectual direction"
                   role="Founder, Chief Architect & Chief of Investigations"
                   featured
                   photo={photoByName.get("Eron Subedi")}
