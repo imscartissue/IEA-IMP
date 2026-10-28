@@ -35,15 +35,10 @@ export function Hero() {
       <div className="animate-[page-settle_420ms_cubic-bezier(0.16,1,0.3,1)_both]">
         <div className="grid items-center gap-x-10 gap-y-6 xl:grid-cols-[minmax(0,1fr)_auto]">
           <div className="min-w-0">
-            <div className="mb-5 flex items-center gap-3">
-              <span className="accent-mark" aria-hidden="true" />
-              <p
-                aria-label="Institute for Educational Accountability"
-                className="type-label max-w-[15rem] text-xs leading-snug tracking-[0.07em] text-gold sm:max-w-none sm:text-sm sm:tracking-[0.14em]"
-              >
-                <span aria-hidden="true">
-                  Institute for Educational<br className="sm:hidden" /> Accountability
-                </span>
+            <div className="mb-5 flex max-w-full flex-wrap items-center gap-3">
+              <span className="accent-mark shrink-0" aria-hidden="true" />
+              <p className="type-label max-w-full text-[0.7rem] leading-snug tracking-[0.04em] text-gold sm:text-sm sm:tracking-[0.14em]">
+                Institute for Educational Accountability
               </p>
             </div>
             <span className="type-label text-bronze-ink">Edition {meta.edition}</span>
