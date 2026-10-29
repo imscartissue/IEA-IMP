@@ -1234,3 +1234,24 @@ html.intro-active {
     animation: none;
   }
 }
+
+
+/* Faint Orwellian engraving fills the red-flag index background. The ivory
+   wash keeps school names and student-reported summaries readable. */
+.red-flag-collection-page {
+  position: relative;
+  isolation: isolate;
+  background-image:
+    linear-gradient(180deg, rgb(244 236 216 / 0.82), rgb(244 236 216 / 0.88)),
+    url("/images/orwell.png");
+  background-position: center top, center top;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, fixed;
+}
+
+@media (max-width: 48rem) {
+  .red-flag-collection-page {
+    background-attachment: scroll, scroll;
+  }
+}

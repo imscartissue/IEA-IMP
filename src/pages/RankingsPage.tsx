@@ -31,7 +31,7 @@ export function RankingsPage() {
 
   return (
     <Container>
-      <div className="animate-route-in">
+      <div className={view === "redflags" ? "animate-route-in red-flag-collection-page" : "animate-route-in"}>
         <header className="pt-12 md:pt-20">
           <Reveal staggerMs={60}>
             <h1 tabIndex={-1} className="type-title text-ink outline-none">
@@ -51,7 +51,7 @@ export function RankingsPage() {
               </div>
               <div className="flex gap-2">
                 <dt>Source</dt>
-                <dd className="text-ink-muted">{meta.source}</dd>
+                <dd className="text-ink-muted">{view === "redflags" ? "IEA findings from third-party sources" : meta.source}</dd>
               </div>
             </dl>
           </Reveal>

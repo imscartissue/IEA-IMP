@@ -2,7 +2,6 @@ import { useMemo } from "react";
 import { Link } from "react-router";
 
 import { Monogram } from "@/components/data-display/Monogram";
-import { RedFlagAmbience } from "@/components/red-flags/RedFlagAmbience";
 import { redFlags } from "@/lib/data";
 
 /**
@@ -37,11 +36,7 @@ export function RedFlagList() {
   const list = useMemo(() => shuffled(redFlags), []);
 
   return (
-    <>
-      <div className="mb-6 flex justify-end">
-        <RedFlagAmbience />
-      </div>
-      <ul className="red-flag-list grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="red-flag-list grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
       {list.map((redFlag) => (
         <li key={redFlag.id}>
           <Link
@@ -63,7 +58,6 @@ export function RedFlagList() {
           </Link>
         </li>
       ))}
-      </ul>
-    </>
+    </ul>
   );
 }

@@ -6,7 +6,6 @@ import { Reveal } from "@/components/site/Reveal";
 import { Rule } from "@/components/site/Rule";
 import { SectionHeader } from "@/components/data-display/SectionHeader";
 import { Monogram } from "@/components/data-display/Monogram";
-import { RedFlagAmbience } from "@/components/red-flags/RedFlagAmbience";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 import { applySeo, redFlagSeo } from "@/lib/seo";
 import { getRedFlag, schools } from "@/lib/data";
@@ -97,7 +96,6 @@ function RedFlagDetail({ redFlag }: { redFlag: RedFlag }) {
                 Published by IEA · {meta.publicationDate.slice(0, 4)} · Reasons:{" "}
                 {redFlag.reasons.length} · Status: Flagged
               </p>
-              <RedFlagAmbience onDark />
             </div>
 
             <div className="red-flag-case-summary mt-7 grid gap-6 md:grid-cols-[minmax(0,1fr)_minmax(15rem,0.65fr)] md:items-end">
