@@ -211,6 +211,9 @@ export function AboutPage() {
             IEA does not accept donations or receive funding from foreign
             organisations. Every member of the Institute was born in Nepal.
           </p>
+          <p className="type-body mt-4 max-w-[46rem] text-ink-muted">
+            The Institute began its work in 2025.
+          </p>
         </Reveal>
 
         <Rule />
