@@ -1067,14 +1067,6 @@ html.intro-active {
   padding: 2rem 1.5rem;
 }
 
-.founder-profile-card::before {
-  content: "";
-  position: absolute;
-  inset: 0.45rem;
-  border: 1px solid var(--bronze-soft);
-  pointer-events: none;
-}
-
 .founder-profile-card > *:not(.founder-profile-motif) {
   position: relative;
   z-index: 1;
@@ -1098,16 +1090,6 @@ html.intro-active {
   padding: 2rem 1.5rem;
 }
 
-.founder-profile-card::before {
-  content: "";
-  position: absolute;
-  inset: 0.5rem;
-  z-index: 1;
-  border: 1.5px solid var(--letter);
-  border-radius: 1.05rem;
-  pointer-events: none;
-}
-
 .founder-profile-card > * {
   position: relative;
   z-index: 2;
@@ -1126,8 +1108,4 @@ html.intro-active {
     padding: 1.75rem 1rem;
   }
 
-  .founder-profile-card::before {
-    inset: 0.42rem;
-    border-radius: 0.95rem;
   }
-}

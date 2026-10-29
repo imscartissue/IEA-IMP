@@ -117,11 +117,6 @@ export function AboutPage() {
         {/* --- research timeline ------------------------------------------- */}
         <Reveal className="py-12 md:py-16" delayMs={120}>
           <section className="relative isolate overflow-hidden rounded-2xl border-2 border-ink/20 bg-white px-6 py-8 shadow-sm md:px-10 md:py-10">
-            <img
-              src="/favicon.svg"
-              alt="Institute for Educational Accountability"
-              className="absolute right-6 top-6 h-9 w-9 rounded-md md:right-8 md:top-8"
-            />
             <div className="relative z-10">
           <div className="flex items-center gap-3">
             <AccentRule />
@@ -237,6 +232,16 @@ export function AboutPage() {
             </div>
           </section>
         </Reveal>
+
+        <aside className="mx-auto mt-2 max-w-[46rem] border-l-2 border-letter/60 pl-4 md:pl-6">
+          <p className="type-label text-ink-faint">A note on founding roles</p>
+          <p className="type-caption mt-2 text-ink-faint">
+            The Institute was initially started from scratch by Yogeshwor Sharma and Eron Subedi.
+            Those identified separately as co-founders joined before the Institute&rsquo;s formal
+            establishment and contributed to its early development, but were not part of the
+            original founding effort. The separate titles reflect this distinction.
+          </p>
+        </aside>
 
         <p className="type-body measure mt-6 text-ink-muted">
           We want to show our gratitude to all those who answered the surveys
