@@ -1359,3 +1359,40 @@ html.intro-active {
       url("/images/orwell.png");
   }
 }
+
+
+/* Extend the red-flag image and claret wash through the viewport gutters. */
+.red-flag-collection-page {
+  background: transparent;
+}
+
+.red-flag-collection-page::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(50% - 50vw);
+  z-index: -1;
+  background-color: var(--claret);
+  background-image:
+    linear-gradient(180deg, rgb(107 31 42 / 0.62), rgb(19 10 15 / 0.7)),
+    url("/images/orwell.png");
+  background-position: center top, center 7rem;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: scroll, fixed;
+  pointer-events: none;
+}
+
+@media (max-width: 48rem) {
+  .red-flag-collection-page::before {
+    background-image:
+      linear-gradient(180deg, rgb(107 31 42 / 0.54), rgb(19 10 15 / 0.66)),
+      url("/images/orwell.png");
+    background-position: center top, center 9rem;
+    background-size: cover, auto 100vh;
+    background-attachment: scroll, fixed;
+  }
+
+  .red-flag-collection-page .red-flag-card {
+    background-color: rgb(19 10 15 / 0.42);
+  }
+}
