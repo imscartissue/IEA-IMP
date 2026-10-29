@@ -127,7 +127,7 @@ export function RankingsToolbar({
   */
   if (view === "redflags") {
     return (
-      <div className="flex flex-col gap-4">
+      <div className="red-flag-view-toolbar flex flex-col gap-4">
         <ToggleGroup
           type="single"
           variant="outline"
