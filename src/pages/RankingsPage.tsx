@@ -32,7 +32,7 @@ export function RankingsPage() {
   return (
     <Container>
       <div className={view === "redflags" ? "animate-route-in red-flag-collection-page" : "animate-route-in"}>
-        <header className="pt-12 md:pt-20">
+        <header className={view === "redflags" ? "red-flag-index-header" : "pt-12 md:pt-20"}>
           <Reveal staggerMs={60}>
             <h1 tabIndex={-1} className="type-title text-ink outline-none">
               {view === "redflags" ? "Red flag schools" : "Rankings"}

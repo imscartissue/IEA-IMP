@@ -1201,7 +1201,14 @@ html.intro-active {
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  background-color: rgb(244 236 216 / 0.56);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   animation: red-flag-card-arrive 850ms var(--ease-brand) both;
+}
+
+.red-flag-card:hover {
+  background-color: rgb(242 234 218 / 0.72);
 }
 
 .red-flag-card::after {
@@ -1253,5 +1260,39 @@ html.intro-active {
 @media (max-width: 48rem) {
   .red-flag-collection-page {
     background-attachment: scroll, scroll;
+  }
+}
+
+
+/* Publication details for the red-flag index sit in a full-bleed claret band. */
+.red-flag-index-header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-inline: calc(50% - 50vw);
+  padding: 2.75rem max(1rem, calc(50vw - 600px + 1.5rem)) 2.25rem;
+  border-block: 1px solid rgb(201 164 92 / 0.32);
+  background:
+    radial-gradient(ellipse at 88% -20%, rgb(201 164 92 / 0.12), transparent 52%),
+    linear-gradient(
+      112deg,
+      color-mix(in srgb, var(--claret) 78%, var(--ink)) 0%,
+      var(--claret) 58%,
+      color-mix(in srgb, var(--claret) 82%, var(--ink)) 100%
+    );
+}
+
+.red-flag-index-header .text-ink {
+  color: var(--ink-inverse);
+}
+
+.red-flag-index-header .text-ink-muted,
+.red-flag-index-header .text-ink-faint {
+  color: rgb(244 236 216 / 0.76);
+}
+
+@media (max-width: 48rem) {
+  .red-flag-index-header {
+    padding-block: 2.25rem 1.75rem;
   }
 }
