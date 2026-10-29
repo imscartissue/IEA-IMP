@@ -351,7 +351,7 @@ export function AboutPage() {
         {/* --- frequently asked questions ---------------------------------- */}
         <Rule />
         <Reveal className="py-12 md:py-16" delayMs={340}>
-          <section aria-labelledby="about-faq-heading">
+          <section aria-label="Frequently asked questions">
             <SectionHeader
               eyebrow="Answers"
               title="Frequently asked questions"
