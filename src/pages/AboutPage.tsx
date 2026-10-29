@@ -118,10 +118,9 @@ export function AboutPage() {
         <Reveal className="py-12 md:py-16" delayMs={120}>
           <section className="relative isolate overflow-hidden rounded-2xl border-2 border-ink/20 bg-white px-6 py-8 shadow-sm md:px-10 md:py-10">
             <img
-              src="/images/gadsden.png"
-              alt=""
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-y-0 right-0 h-full w-[58%] object-contain opacity-[0.09] grayscale mix-blend-multiply md:w-[42%]"
+              src="/favicon.svg"
+              alt="Institute for Educational Accountability"
+              className="absolute right-6 top-6 h-9 w-9 rounded-md md:right-8 md:top-8"
             />
             <div className="relative z-10">
           <div className="flex items-center gap-3">
