@@ -114,6 +114,45 @@ export function AboutPage() {
 
         <Rule />
 
+        {/* --- research timeline ------------------------------------------- */}
+        <Reveal className="py-12 md:py-16" delayMs={120}>
+          <div className="flex items-center gap-3">
+            <AccentRule />
+            <span className="type-label text-bronze-ink">Research and development</span>
+          </div>
+          <h2 className="type-heading mt-4 text-ink">How the work has developed</h2>
+          <div className="mt-8 max-w-[46rem] border-l border-rule pl-5 md:pl-7">
+            <div className="mb-6">
+              <p className="type-label text-bronze-ink">2025</p>
+              <p className="type-body mt-1 text-ink-muted">Survey design and methodology development began.</p>
+            </div>
+            <div className="mb-6">
+              <p className="type-label text-bronze-ink">Early 2026</p>
+              <p className="type-body mt-1 text-ink-muted">Online research and literature review began.</p>
+            </div>
+            <div className="mb-6">
+              <p className="type-label text-bronze-ink">Mid 2026</p>
+              <p className="type-body mt-1 text-ink-muted">The first batch of surveys was completed.</p>
+            </div>
+            <div className="mb-6">
+              <p className="type-label text-bronze-ink">Third quarter of 2026</p>
+              <p className="type-body mt-1 text-ink-muted">Field research began.</p>
+            </div>
+            <div className="mb-6">
+              <p className="type-label text-bronze-ink">September 2026</p>
+              <p className="type-body mt-1 text-ink-muted">The litigation process began.</p>
+            </div>
+            <div>
+              <p className="type-label text-bronze-ink">First quarter of 2027 · expected</p>
+              <p className="type-body mt-1 text-ink-muted">
+                The Institute expects to publish its research, field findings, and reporting on litigation-related work.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        <Rule />
+
         {/* --- people ------------------------------------------------------ */}
         <Reveal className="py-8 md:py-20" delayMs={180}>
           <div className="mb-12 text-center md:mb-16">
@@ -210,9 +249,6 @@ export function AboutPage() {
           <p className="type-body-lg mt-6 max-w-[46rem] text-ink">
             IEA does not accept donations or receive funding from foreign
             organisations. Every member of the Institute was born in Nepal.
-          </p>
-          <p className="type-body mt-4 max-w-[46rem] text-ink-muted">
-            The Institute began its work in 2025.
           </p>
         </Reveal>
 
