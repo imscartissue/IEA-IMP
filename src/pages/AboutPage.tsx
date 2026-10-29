@@ -175,9 +175,6 @@ export function AboutPage() {
             <div className="absolute inset-0 -z-10 bg-bronze-soft/40 rounded-2xl blur-3xl" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
               <div className="founder-profile-card founder-profile-card--president">
-                <div className="founder-profile-motif founder-profile-motif--madison" aria-hidden="true">
-                  <img src="/images/madison/bust.webp" alt="" />
-                </div>
                 <TeamCard
                   name="Yogeshwor Sharma"
                   role="Founder, President, & Head of Operations"
@@ -192,19 +189,10 @@ export function AboutPage() {
                 </Button>
               </div>
               <div className="founder-profile-card founder-profile-card--liberte">
-                <div className="founder-profile-motif founder-profile-motif--declaration" aria-hidden="true">
-                  <svg viewBox="0 0 64 64" fill="none">
-                    <path d="M18 14h28M20 18h24" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity=".5" />
-                    <path d="M35 21c-6 5-8 11-8 18m8-18c3 5 7 8 11 10M35 21l3-6 3 2-4 5m-10 17c-2 2-5 4-8 5m11-7 9 1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M18 44h28M18 48h24" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity=".55" />
-                    <path d="m17 12 1.2 2.4 2.6.4-1.9 1.8.5 2.6-2.4-1.2-2.3 1.2.4-2.6-1.9-1.8 2.6-.4L17 12Z" fill="currentColor" opacity=".55" />
-                  </svg>
-                </div>
                 <TeamCard
                   name="Eron Subedi"
                   role="Founder, Chief Architect & Chief of Investigations"
                   featured
-                  photo={photoByName.get("Eron Subedi")}
                 />
                 <Button
                   onClick={() => setLetter("founder")}

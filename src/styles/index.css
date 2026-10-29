@@ -1087,87 +1087,47 @@ html.intro-active {
 }
 
 
-/* The principal founder cards use a unified blue institutional frame.
-   Individual motifs add quiet references without competing with the portraits. */
+/* The principal founder cards share a soft-edged ink-navy frame. */
 .founder-profile-card {
   isolation: isolate;
   overflow: hidden;
-  border-width: 2px;
-  border-color: var(--letter-deep);
-  background: var(--letter-wash);
+  border: 2px solid var(--letter);
+  border-top: 4px solid var(--letter);
+  border-radius: 1.5rem;
+  background: #131a35;
+  padding: 2rem 1.5rem;
 }
 
 .founder-profile-card::before {
-  z-index: 1;
-  inset: 0.5rem;
-  border-width: 1.5px;
-  border-color: var(--letter-deep);
-}
-
-.founder-profile-card > *:not(.founder-profile-motif) {
-  z-index: 2;
-}
-
-.founder-profile-card--president,
-.founder-profile-card--liberte {
-  border-top: 4px solid var(--letter-deep);
-}
-
-.founder-profile-motif {
-  position: absolute;
-  top: 1.35rem;
-  right: 1.35rem;
-  z-index: 0;
-  display: grid;
-  width: 4.25rem;
-  aspect-ratio: 1;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid rgb(36 72 95 / 0.3);
-  border-radius: 1rem;
-  background: rgb(255 255 255 / 0.68);
-  box-shadow: inset 0 0 0 4px rgb(255 255 255 / 0.42);
-  padding: 0.3rem;
-}
-
-.founder-profile-motif--madison img {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.72rem;
-  object-fit: cover;
-  object-position: center 22%;
-  filter: grayscale(1);
-  opacity: 0.72;
-}
-
-.founder-profile-motif--declaration {
-  color: var(--letter-deep);
-  background: linear-gradient(145deg, #f5f0df, #e3ebf0);
-}
-
-.founder-profile-motif--declaration::before {
-  position: absolute;
-  inset: 0.28rem;
-  border: 1px solid rgb(36 72 95 / 0.24);
-  border-radius: 0.72rem;
   content: "";
+  position: absolute;
+  inset: 0.5rem;
+  z-index: 1;
+  border: 1.5px solid var(--letter);
+  border-radius: 1.05rem;
   pointer-events: none;
 }
 
-.founder-profile-motif--declaration svg {
-  width: 100%;
-  height: 100%;
-  opacity: 0.78;
+.founder-profile-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.founder-profile-card .text-ink {
+  color: var(--ink-inverse);
+}
+
+.founder-profile-card .text-ink-faint {
+  color: rgb(244 236 216 / 0.72);
 }
 
 @media (max-width: 48rem) {
-  .founder-profile-card::before {
-    inset: 0.42rem;
+  .founder-profile-card {
+    padding: 1.75rem 1rem;
   }
 
-  .founder-profile-motif {
-    top: 1rem;
-    right: 1rem;
-    width: 3.6rem;
+  .founder-profile-card::before {
+    inset: 0.42rem;
+    border-radius: 0.95rem;
   }
 }
