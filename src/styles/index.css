@@ -1075,7 +1075,7 @@ html.intro-active {
   pointer-events: none;
 }
 
-.founder-profile-card > * {
+.founder-profile-card > *:not(.founder-profile-motif) {
   position: relative;
   z-index: 1;
 }
@@ -1087,12 +1087,14 @@ html.intro-active {
 }
 
 
-/* Distinct archival photographs sit inside each founder's complete frame. */
+/* The principal founder cards use a unified blue institutional frame.
+   Individual motifs add quiet references without competing with the portraits. */
 .founder-profile-card {
   isolation: isolate;
   overflow: hidden;
   border-width: 2px;
   border-color: var(--letter-deep);
+  background: var(--letter-wash);
 }
 
 .founder-profile-card::before {
@@ -1102,37 +1104,70 @@ html.intro-active {
   border-color: var(--letter-deep);
 }
 
-.founder-profile-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background:
-    linear-gradient(180deg, rgb(248 245 236 / 0.08) 0%, rgb(248 245 236 / 0.34) 40%, var(--surface) 88%),
-    var(--founder-backdrop) var(--founder-backdrop-position, center 42%) / cover no-repeat;
-  filter: grayscale(1);
-  opacity: 0.38;
-  pointer-events: none;
-}
-
-.founder-profile-card > * {
+.founder-profile-card > *:not(.founder-profile-motif) {
   z-index: 2;
 }
 
-.founder-profile-card--president {
-  --founder-backdrop: url("/images/founders/yogeshwor-view.webp");
-  --founder-backdrop-position: center 40%;
+.founder-profile-card--president,
+.founder-profile-card--liberte {
   border-top: 4px solid var(--letter-deep);
 }
 
-.founder-profile-card--liberte {
-  --founder-backdrop: url("/images/founders/eron-liberte.jpg");
-  --founder-backdrop-position: center 44%;
-  border-top: 4px solid var(--letter-deep);
+.founder-profile-motif {
+  position: absolute;
+  top: 1.35rem;
+  right: 1.35rem;
+  z-index: 0;
+  display: grid;
+  width: 4.25rem;
+  aspect-ratio: 1;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgb(36 72 95 / 0.3);
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 0.68);
+  box-shadow: inset 0 0 0 4px rgb(255 255 255 / 0.42);
+  padding: 0.3rem;
+}
+
+.founder-profile-motif--madison img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.72rem;
+  object-fit: cover;
+  object-position: center 22%;
+  filter: grayscale(1);
+  opacity: 0.72;
+}
+
+.founder-profile-motif--declaration {
+  color: var(--letter-deep);
+  background: linear-gradient(145deg, #f5f0df, #e3ebf0);
+}
+
+.founder-profile-motif--declaration::before {
+  position: absolute;
+  inset: 0.28rem;
+  border: 1px solid rgb(36 72 95 / 0.24);
+  border-radius: 0.72rem;
+  content: "";
+  pointer-events: none;
+}
+
+.founder-profile-motif--declaration svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.78;
 }
 
 @media (max-width: 48rem) {
   .founder-profile-card::before {
     inset: 0.42rem;
+  }
+
+  .founder-profile-motif {
+    top: 1rem;
+    right: 1rem;
+    width: 3.6rem;
   }
 }

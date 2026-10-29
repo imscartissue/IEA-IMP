@@ -26,7 +26,7 @@ export function TeamCard({
       <div className={cn(
         "relative size-24 sm:size-36 rounded-full bg-canvas flex items-center justify-center transition-all duration-500 ease-brand",
         featured &&
-          "relative size-32 sm:size-40 border-2 border-bronze bg-bronze-soft/30 group-hover:border-bronze group-hover:shadow-[0_0_40px_rgb(138_106_53_0.3)]",
+          "relative size-32 sm:size-40 border-2 border-letter bg-letter-wash group-hover:border-letter group-hover:shadow-[0_0_40px_rgb(47_93_124_0.2)]",
         !featured &&
           "border border-rule-soft group-hover:border-bronze group-hover:shadow-[0_0_24px_rgb(138_106_53_0.12)]",
       )}>
