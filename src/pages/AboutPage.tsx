@@ -5,8 +5,10 @@ import { Container } from "@/components/site/Container";
 import { Reveal } from "@/components/site/Reveal";
 import { Rule, AccentRule } from "@/components/site/Rule";
 import { StatBlock, StatRow } from "@/components/data-display/StatBlock";
+import { SectionHeader } from "@/components/data-display/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { TeamCard } from "@/components/site/TeamCard";
+import { FaqItem } from "@/components/site/FaqItem";
 import { MessageModal } from "@/components/site/MessageModal";
 import { founderMessage, presidentMessage } from "@/data/messages";
 import { contributors } from "@/data/contributors";
@@ -233,16 +235,6 @@ export function AboutPage() {
           </section>
         </Reveal>
 
-        <aside className="mx-auto mt-2 max-w-[46rem] border-l-2 border-letter/60 pl-4 md:pl-6">
-          <p className="type-label text-ink-faint">A note on founding roles</p>
-          <p className="type-caption mt-2 text-ink-faint">
-            The Institute was initially started from scratch by Yogeshwor Sharma and Eron Subedi.
-            Those identified separately as co-founders joined before the Institute&rsquo;s formal
-            establishment and contributed to its early development, but were not part of the
-            original founding effort. The separate titles reflect this distinction.
-          </p>
-        </aside>
-
         <p className="type-body measure mt-6 text-ink-muted">
           We want to show our gratitude to all those who answered the surveys
           honestly and made this possible. Their name and the individual
@@ -352,6 +344,93 @@ export function AboutPage() {
                 </div>
               </div>
 
+            </div>
+          </section>
+        </Reveal>
+
+        {/* --- frequently asked questions ---------------------------------- */}
+        <Rule />
+        <Reveal className="py-12 md:py-16" delayMs={340}>
+          <section aria-labelledby="about-faq-heading">
+            <SectionHeader
+              eyebrow="Answers"
+              title="Frequently asked questions"
+              lede="More detail on the Institute, its research, and the people behind it."
+            />
+            <div className="mt-6 max-w-[52rem]">
+              <FaqItem
+                question="What is the Institute for Educational Accountability?"
+                answer={
+                  <p className="type-body measure-snug text-ink-muted">
+                    The Institute for Educational Accountability (IEA) conducts research on
+                    educational accountability in Nepal through student surveys, school
+                    investigations, online research, field research, and evidence-based analysis.
+                  </p>
+                }
+              />
+              <FaqItem
+                question="How are the school rankings calculated?"
+                answer={
+                  <p className="type-body measure-snug text-ink-muted">
+                    Overall scores combine School Environment (30%), Net Benefit (30%),
+                    Infrastructure (20%), and Net Cost (20%). Net Cost is inverted, so a lower
+                    cost burden contributes a higher score. The <Link to="/methodology" className="underline underline-offset-4">methodology page</Link> explains the scoring and ranking process.
+                  </p>
+                }
+              />
+              <FaqItem
+                question="What does a school's score tell me?"
+                answer={
+                  <p className="type-body measure-snug text-ink-muted">
+                    It summarizes how student respondents rated the school across the published
+                    dimensions and how it compares with other schools in the dataset. It is not
+                    an accreditation, an endorsement, or an individual recommendation for a student.
+                  </p>
+                }
+              />
+              <FaqItem
+                question="How are survey participants' responses handled?"
+                answer={
+                  <p className="type-body measure-snug text-ink-muted">
+                    Surveys are collected anonymously. The Institute does not publish participants'
+                    names or individual responses.
+                  </p>
+                }
+              />
+              <FaqItem
+                question="How does IEA handle communication from schools?"
+                answer={
+                  <p className="type-body measure-snug text-ink-muted">
+                    A school contacting IEA should expect an accurate public summary of its
+                    communication, subject to applicable law. Calls are recorded only after
+                    participants have been informed and have consented.
+                  </p>
+                }
+              />
+              <FaqItem
+                question="Who can request underlying sources and supporting evidence?"
+                answer={
+                  <p className="type-body measure-snug text-ink-muted">
+                    Requests are considered from government bodies, international watchdogs, and
+                    human rights institutions. They may be sent to{" "}
+                    <a href="mailto:request@ieainstitute.org" className="underline underline-offset-4">
+                      request@ieainstitute.org
+                    </a>.
+                  </p>
+                }
+              />
+              <FaqItem
+                question="Why are Yogeshwor Sharma and Eron Subedi listed as founders, while others are listed as co-founders?"
+                answer={
+                  <p className="type-body measure-snug text-ink-muted">
+                    Yogeshwor Sharma and Eron Subedi started the Institute from scratch and carried
+                    out the original founding work. Those listed separately as co-founders joined
+                    before the Institute was formally established and contributed to its early
+                    development, but were not part of the original founding effort. The titles
+                    distinguish these roles in the Institute's formation.
+                  </p>
+                }
+              />
             </div>
           </section>
         </Reveal>
