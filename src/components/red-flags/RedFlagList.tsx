@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link } from "react-router";
 
 import { Monogram } from "@/components/data-display/Monogram";
+import { RedFlagAmbience } from "@/components/red-flags/RedFlagAmbience";
 import { redFlags } from "@/lib/data";
 
 /**
@@ -36,12 +37,16 @@ export function RedFlagList() {
   const list = useMemo(() => shuffled(redFlags), []);
 
   return (
-    <ul className="grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    <>
+      <div className="mb-6 flex justify-end">
+        <RedFlagAmbience />
+      </div>
+      <ul className="red-flag-list grid grid-cols-1 gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
       {list.map((redFlag) => (
         <li key={redFlag.id}>
           <Link
             to={`/red-flag/${redFlag.id}`}
-            className="block h-full p-6 border border-rule-soft bg-canvas transition-colors hover:bg-bronze-wash"
+            className="red-flag-card block h-full p-6 border border-rule-soft bg-canvas transition-colors hover:bg-bronze-wash"
           >
             <div className="flex items-center gap-3">
               <Monogram name={redFlag.name} size="lg" />
@@ -58,6 +63,7 @@ export function RedFlagList() {
           </Link>
         </li>
       ))}
-    </ul>
+      </ul>
+    </>
   );
 }

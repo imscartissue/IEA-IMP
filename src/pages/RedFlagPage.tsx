@@ -6,6 +6,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { Rule } from "@/components/site/Rule";
 import { SectionHeader } from "@/components/data-display/SectionHeader";
 import { Monogram } from "@/components/data-display/Monogram";
+import { RedFlagAmbience } from "@/components/red-flags/RedFlagAmbience";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 import { applySeo, redFlagSeo } from "@/lib/seo";
 import { getRedFlag, schools } from "@/lib/data";
@@ -45,7 +46,7 @@ function RedFlagDetail({ redFlag }: { redFlag: RedFlag }) {
           <div className="flex items-center gap-3 py-3 md:py-4">
             <span
               aria-hidden="true"
-              className="inline-flex size-6 shrink-0 items-center justify-center rounded-sm border border-ink-inverse/40 font-serif text-xs font-bold"
+              className="red-flag-alert-symbol inline-flex size-6 shrink-0 items-center justify-center rounded-sm border border-ink-inverse/40 font-serif text-xs font-bold"
             >
               !
             </span>
@@ -91,10 +92,13 @@ function RedFlagDetail({ redFlag }: { redFlag: RedFlag }) {
               {redFlag.name}
             </h1>
 
-            <p className="type-caption mt-4 text-ink-inverse/70">
-              Published by IEA · {meta.publicationDate.slice(0, 4)} · Reasons:{" "}
-              {redFlag.reasons.length} · Status: Flagged
-            </p>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="type-caption text-ink-inverse/70">
+                Published by IEA · {meta.publicationDate.slice(0, 4)} · Reasons:{" "}
+                {redFlag.reasons.length} · Status: Flagged
+              </p>
+              <RedFlagAmbience onDark />
+            </div>
 
             <div className="red-flag-case-summary mt-7 grid gap-6 md:grid-cols-[minmax(0,1fr)_minmax(15rem,0.65fr)] md:items-end">
               <p className="type-heading max-w-[40rem] text-ink-inverse">
